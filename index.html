@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生理周期トラッカー【無料】次回予測・体調管理</title>
+    <meta name="description" content="生理周期を記録して次回予測日・排卵日を計算。体調の波を把握して毎月の計画を立てやすくするシンプルな周期管理ツール。">
+    <link rel="canonical" href="https://appadaycreator.com/menstrual-cycle-tracker/">
+    <meta property="og:title" content="生理周期トラッカー【無料】次回予測・体調管理">
+    <meta property="og:description" content="生理周期を記録して次回予測日・排卵日を計算。体調の波を把握して毎月の計画を立てやすくするシンプルな周期管理ツール。">
+    <meta property="og:url" content="https://appadaycreator.com/menstrual-cycle-tracker/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:image" content="https://appadaycreator.com/assets/ogp-default.png">
+    <meta name="twitter:card" content="summary">
+    <link rel="canonical" href="https://appadaycreator.com/menstrual-cycle-tracker/">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌸</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+    <link rel="dns-prefetch" href="https://www.clarity.ms">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <!-- GTM -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TXQGZRF9');</script>
+    <!-- Clarity -->
+    <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","s3t9vl8h3v");</script>
+    <!-- AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8427583028015858" crossorigin="anonymous"></script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"生理周期トラッカー","description":"生理周期を記録して次回予測日・排卵日を計算。体調の波を把握して毎月の計画を立てやすくするシンプルな周期管理ツール。","url":"https://appadaycreator.com/menstrual-cycle-tracker/","applicationCategory":"UtilityApplication","operatingSystem":"Any","inLanguage":"ja","offers":{"@type":"Offer","price":"0","priceCurrency":"JPY"},"author":{"@type":"Organization","name":"AppADayCreator","url":"https://appadaycreator.com/"}}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "生理周期トラッカーは無料で使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい、完全無料でご利用いただけます。登録・ログインも不要です。"}}, {"@type": "Question", "name": "スマートフォンでも使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい、スマートフォン・タブレット・PCすべてのデバイスからご利用いただけます。"}}, {"@type": "Question", "name": "入力したデータは保存されますか？", "acceptedAnswer": {"@type": "Answer", "text": "入力データはブラウザ内のみで処理され、サーバーへの送信・保存は行いません。プライバシーは保護されます。"}}, {"@type": "Question", "name": "何回でも使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい、回数制限なく何度でもご利用いただけます。"}}, {"@type": "Question", "name": "利用に年齢制限はありますか？", "acceptedAnswer": {"@type": "Answer", "text": "年齢制限はありません。どなたでも無料でご利用いただけます。"}}]}</script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', 'Noto Sans JP', sans-serif; background: linear-gradient(135deg, #FFF1F2 0%, #FFE4E6 100%); min-height: 100vh; color: #333; line-height: 1.6; }
+        .site-header { background: #E11D48; color: white; padding: 32px 20px; text-align: center; }
+        .site-header .emoji { font-size: 52px; margin-bottom: 8px; }
+        .site-header h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+        .site-header p { font-size: 14px; opacity: 0.9; }
+        .container { max-width: 800px; margin: 0 auto; padding: 16px; }
+        .card { background: white; border-radius: 16px; padding: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-bottom: 16px; }
+        .btn { background: #E11D48; color: white; border: none; padding: 14px 24px; border-radius: 10px; font-size: 16px; font-weight: 600; cursor: pointer; width: 100%; transition: opacity .2s; }
+        .btn:hover { opacity: 0.9; }
+        .btn:active { transform: scale(0.98); }
+        input, select, textarea { width: 100%; padding: 10px 14px; border: 1.5px solid #e2e8f0; border-radius: 8px; font-size: 15px; margin-top: 4px; font-family: inherit; }
+        input:focus, select:focus { outline: none; border-color: #E11D48; }
+        label { font-size: 13px; font-weight: 600; color: #555; display: block; margin-top: 14px; margin-bottom: 2px; }
+        .result { display: none; }
+        .result.show { display: block; }
+        .result-value { font-size: 36px; font-weight: 700; color: #E11D48; text-align: center; padding: 16px 0; }
+        .badge { display: inline-block; background: #E11D4820; color: #E11D48; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+        /* ── サービス固有CSS ── */
+
+    </style>
+</head>
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TXQGZRF9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <header class="site-header">
+        <div class="emoji">🌸</div>
+        <h1>生理周期トラッカー</h1>
+        <p>生理周期を記録して次回予測日・排卵日を計算します...</p>
+    </header>
+
+    <main class="container">
+        <ins class="adsbygoogle" style="display:block;margin:12px 0" data-ad-client="ca-pub-8427583028015858" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+        <div class="card">
+          <h2 style="font-size:18px;font-weight:700;margin-bottom:12px;">🌸 生理周期トラッカー</h2>
+          <p style="color:#666;font-size:14px;margin-bottom:16px;">最終生理開始日と平均周期を入力して次回予測日を計算します</p>
+          <label>最終生理開始日</label>
+          <input type="date" id="last-date">
+          <label>平均生理周期（日数）</label>
+          <div style="display:flex;align-items:center;gap:8px;margin-top:4px;">
+            <input type="range" id="cycle-range" min="21" max="40" value="28" style="flex:1;padding:0;border:none;" oninput="document.getElementById('cycle-val').textContent=this.value">
+            <span id="cycle-val" style="font-size:20px;font-weight:700;color:#E11D48;min-width:36px;text-align:center;">28</span>
+            <span style="font-size:13px;color:#888;">日</span>
+          </div>
+          <label>生理期間（日数）</label>
+          <div style="display:flex;align-items:center;gap:8px;margin-top:4px;">
+            <input type="range" id="period-range" min="2" max="10" value="5" style="flex:1;padding:0;border:none;" oninput="document.getElementById('period-val').textContent=this.value">
+            <span id="period-val" style="font-size:20px;font-weight:700;color:#E11D48;min-width:24px;text-align:center;">5</span>
+            <span style="font-size:13px;color:#888;">日間</span>
+          </div>
+          <button class="btn" style="margin-top:20px;" onclick="calc()">計算する →</button>
+        </div>
+        <div class="result" id="result">
+          <div class="card">
+            <h3 style="font-size:16px;font-weight:700;color:#E11D48;margin-bottom:12px;">📅 今後3ヶ月の予測</h3>
+            <div id="r-list"></div>
+            <div style="background:#FFF1F2;border-radius:10px;padding:14px;margin-top:12px;font-size:13px;color:#555;line-height:1.8;">
+              <strong>⚠️ 注意事項</strong><br>
+              このツールの予測は平均値に基づく参考値です。実際の周期は体調・ストレスで変動します。妊娠・疾患の疑いがある場合は必ず医療機関にご相談ください。
+            </div>
+            <button class="btn" style="margin-top:16px;" onclick="location.reload()">リセット</button>
+          </div>
+        </div>
+
+        <!-- 関連サービス -->
+        <div class="card" style="margin-top:8px;">
+            <h3 style="font-size:13px;font-weight:600;color:#888;margin-bottom:10px;">🔗 関連サービス</h3>
+            <div style="display:flex;flex-direction:column;gap:6px;">
+                <a href="https://appadaycreator.com/water-intake-calculator/" style="color:#6366f1;font-size:13px;text-decoration:none;padding:6px 0;border-bottom:1px solid #f1f5f9;">1日の水分摂取量計算ツール →</a>
+                <a href="https://appadaycreator.com/sleep-quality-checker/" style="color:#6366f1;font-size:13px;text-decoration:none;padding:6px 0;border-bottom:1px solid #f1f5f9;">睡眠の質チェッカー →</a>
+                <a href="https://appadaycreator.com/vitamin-deficiency-checker/" style="color:#6366f1;font-size:13px;text-decoration:none;padding:6px 0;border-bottom:1px solid #f1f5f9;">ビタミン不足チェック →</a>
+            </div>
+        </div>
+
+        <ins class="adsbygoogle" style="display:block;margin:12px 0" data-ad-client="ca-pub-8427583028015858" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+        <!-- 使い方セクション -->
+        <div class="card" style="margin-top:8px;background:#f8fafc;">
+            <h2 style="font-size:15px;font-weight:700;margin-bottom:12px;color:#374151;">📖 使い方</h2>
+            <ol style="padding-left:20px;font-size:13px;color:#475569;line-height:1.9;">
+                <li>ページを開き、入力フォームを確認する</li>
+                <li>必要な情報を入力または選択する</li>
+                <li>実行ボタンをクリックして結果を表示する</li>
+                <li>表示された結果・アドバイスを確認する</li>
+                <li>必要に応じてSNSでシェアする</li>
+            </ol>
+        </div>
+
+        <!-- FAQ セクション -->
+        <div class="card" style="margin-top:8px;">
+            <h2 style="font-size:15px;font-weight:700;margin-bottom:14px;color:#374151;">❓ よくある質問</h2>
+            <div style="display:flex;flex-direction:column;gap:14px;">
+            <div style="border-bottom:1px solid #f1f5f9;padding-bottom:12px;">
+              <p style="font-size:14px;font-weight:600;color:#374151;margin-bottom:4px;">Q: 生理周期トラッカーは無料で使えますか？</p>
+              <p style="font-size:13px;color:#6b7280;line-height:1.7;">A: はい、完全無料でご利用いただけます。登録・ログインも不要です。</p>
+            </div>
+            <div style="border-bottom:1px solid #f1f5f9;padding-bottom:12px;">
+              <p style="font-size:14px;font-weight:600;color:#374151;margin-bottom:4px;">Q: スマートフォンでも使えますか？</p>
+              <p style="font-size:13px;color:#6b7280;line-height:1.7;">A: はい、スマートフォン・タブレット・PCすべてのデバイスからご利用いただけます。</p>
+            </div>
+            <div style="border-bottom:1px solid #f1f5f9;padding-bottom:12px;">
+              <p style="font-size:14px;font-weight:600;color:#374151;margin-bottom:4px;">Q: 入力したデータは保存されますか？</p>
+              <p style="font-size:13px;color:#6b7280;line-height:1.7;">A: 入力データはブラウザ内のみで処理され、サーバーへの送信・保存は行いません。プライバシーは保護されます。</p>
+            </div>
+            <div style="border-bottom:1px solid #f1f5f9;padding-bottom:12px;">
+              <p style="font-size:14px;font-weight:600;color:#374151;margin-bottom:4px;">Q: 何回でも使えますか？</p>
+              <p style="font-size:13px;color:#6b7280;line-height:1.7;">A: はい、回数制限なく何度でもご利用いただけます。</p>
+            </div>
+            <div style="border-bottom:1px solid #f1f5f9;padding-bottom:12px;">
+              <p style="font-size:14px;font-weight:600;color:#374151;margin-bottom:4px;">Q: 利用に年齢制限はありますか？</p>
+              <p style="font-size:13px;color:#6b7280;line-height:1.7;">A: 年齢制限はありません。どなたでも無料でご利用いただけます。</p>
+            </div>
+            </div>
+        </div>
+
+        <!-- SNSシェアCTA -->
+        <div class="card" style="margin-top:8px;text-align:center;background:linear-gradient(135deg,#FFF1F2,#FFE4E6);">
+            <p style="font-size:13px;font-weight:600;color:#374151;margin-bottom:10px;">📣 友人・家族にシェアする</p>
+            <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;">
+                <a href="https://twitter.com/intent/tweet?text=%E7%94%9F%E7%90%86%E5%91%A8%E6%9C%9F%E3%83%88%E3%83%A9%E3%83%83%E3%82%AB%E3%83%BC%20%23無料ツール&url=https%3A%2F%2Fappadaycreator.com%2Fmenstrual-cycle-tracker%2F" target="_blank" rel="noopener" style="background:#1DA1F2;color:white;padding:8px 16px;border-radius:8px;font-size:13px;text-decoration:none;font-weight:600;">𝕏 シェア</a>
+                <a href="https://line.me/R/msg/text/?%E7%94%9F%E7%90%86%E5%91%A8%E6%9C%9F%E3%83%88%E3%83%A9%E3%83%83%E3%82%AB%E3%83%BC%0Ahttps%3A%2F%2Fappadaycreator.com%2Fmenstrual-cycle-tracker%2F" target="_blank" rel="noopener" style="background:#00B900;color:white;padding:8px 16px;border-radius:8px;font-size:13px;text-decoration:none;font-weight:600;">LINE</a>
+            </div>
+        </div>
+
+        <!-- 免責事項 -->
+        <div style="background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:12px;margin:8px 0;font-size:12px;color:#92400e;">
+            <strong>⚠️ 免責事項</strong>：本ツールの計算・診断結果はあくまで参考情報です。医療・法律・税務・投資等の専門的判断が必要な場合は、必ず資格を持つ専門家にご相談ください。本サービスの利用により生じた損害について、当サービスは一切の責任を負いません。
+        </div>
+    </main>
+
+    <footer style="text-align:center;padding:20px;color:white;font-size:12px;opacity:0.75;margin-top:8px;">
+        <p><a href="https://appadaycreator.github.io/" style="color:white;">AppADayCreator</a>
+        | <a href="privacy-policy.html" style="color:white;">プライバシーポリシー</a>
+        | <a href="terms.html" style="color:white;">利用規約</a>
+        | <a href="contact.html" style="color:white;">お問い合わせ</a></p>
+        <p style="margin-top:4px;font-size:11px;opacity:0.6;">最終更新: 2026年5月 | 本サービスはアフィリエイト広告を掲載しています（A8.net/Amazon）</p>
+        <p style="margin-top:6px;">© 2026 AppADayCreator. All services are free.</p>
+    </footer>
+
+    <script>
+    function calc() {
+      const lastStr=document.getElementById('last-date').value;
+      if(!lastStr){alert('最終生理開始日を入力してください');return;}
+      const cycle=parseInt(document.getElementById('cycle-range').value);
+      const period=parseInt(document.getElementById('period-range').value);
+      const last=new Date(lastStr);
+      const rows=[];
+      for(let i=1;i<=3;i++){
+        const start=new Date(last); start.setDate(start.getDate()+cycle*i);
+        const end=new Date(start); end.setDate(end.getDate()+period-1);
+        const ovul=new Date(last); ovul.setDate(ovul.getDate()+cycle*i-14);
+        const fertile1=new Date(ovul); fertile1.setDate(fertile1.getDate()-2);
+        const fertile2=new Date(ovul); fertile2.setDate(fertile2.getDate()+2);
+        const fmt=d=>d.getFullYear()+'/'+(d.getMonth()+1)+'/'+(d.getDate());
+        rows.push(`<div style="border-left:4px solid #E11D48;padding:10px 14px;margin-bottom:10px;background:#fff9f9;border-radius:0 8px 8px 0;">
+          <div style="font-weight:700;color:#E11D48;">${i}ヶ月後</div>
+          <div style="font-size:14px;margin-top:4px;">🩸 生理: <strong>${fmt(start)} 〜 ${fmt(end)}</strong></div>
+          <div style="font-size:14px;">🥚 排卵予定: <strong>${fmt(ovul)}</strong></div>
+          <div style="font-size:13px;color:#888;">妊娠可能期間: ${fmt(fertile1)} 〜 ${fmt(fertile2)}</div>
+        </div>`);
+      }
+      document.getElementById('r-list').innerHTML=rows.join('');
+      document.getElementById('result').classList.add('show');
+      document.getElementById('result').scrollIntoView({behavior:'smooth'});
+    }
+    </script>
+</body>
+</html>
