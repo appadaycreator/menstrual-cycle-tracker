@@ -27,7 +27,7 @@
     <!-- AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8427583028015858" crossorigin="anonymous"></script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"生理周期トラッカー","description":"生理周期を記録して次回予測日・排卵日を計算。体調の波を把握して毎月の計画を立てやすくするシンプルな周期管理ツール。","url":"https://appadaycreator.com/menstrual-cycle-tracker/","applicationCategory":"UtilityApplication","operatingSystem":"Any","inLanguage":"ja","offers":{"@type":"Offer","price":"0","priceCurrency":"JPY"},"author":{"@type":"Organization","name":"AppADayCreator","url":"https://appadaycreator.com/"}}</script>
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "生理周期トラッカーは無料で使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい、完全無料でご利用いただけます。登録・ログインも不要です。"}}, {"@type": "Question", "name": "スマートフォンでも使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい、スマートフォン・タブレット・PCすべてのデバイスからご利用いただけます。"}}, {"@type": "Question", "name": "入力したデータは保存されますか？", "acceptedAnswer": {"@type": "Answer", "text": "入力データはブラウザ内のみで処理され、サーバーへの送信・保存は行いません。プライバシーは保護されます。"}}, {"@type": "Question", "name": "何回でも使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい、回数制限なく何度でもご利用いただけます。"}}, {"@type": "Question", "name": "利用に年齢制限はありますか？", "acceptedAnswer": {"@type": "Answer", "text": "年齢制限はありません。どなたでも無料でご利用いただけます。"}}]}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "生理周期トラッカーは無料で使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい、完全無料・登録不要でご利用いただけます。"}}, {"@type": "Question", "name": "入力した日付データはどこかに送信されますか？", "acceptedAnswer": {"@type": "Answer", "text": "いいえ。すべての計算はブラウザ内で完結し、サーバーへのデータ送信・保存は行いません。"}}, {"@type": "Question", "name": "排卵日の計算精度はどの程度ですか？", "acceptedAnswer": {"@type": "Answer", "text": "平均周期をもとにした参考値です。実際の排卵日は体調・ストレスで変動します。妊活・避妊目的での使用には、必ず医師または基礎体温測定との併用をご検討ください。"}}, {"@type": "Question", "name": "周期が不規則な場合はどうすればいいですか？", "acceptedAnswer": {"@type": "Answer", "text": "直近3ヶ月の平均を計算して入力してみてください。28日が標準ですが、21〜40日程度の幅があります。"}}, {"@type": "Question", "name": "生理が来ない場合や周期が大きく変わった場合は？", "acceptedAnswer": {"@type": "Answer", "text": "ストレス・体重変化・病気・妊娠などが原因の可能性があります。3ヶ月以上異常が続く場合は婦人科への相談をおすすめします。"}}]}</script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', 'Noto Sans JP', sans-serif; background: linear-gradient(135deg, #FFF1F2 0%, #FFE4E6 100%); min-height: 100vh; color: #333; line-height: 1.6; }
@@ -112,11 +112,11 @@
         <div class="card" style="margin-top:8px;background:#f8fafc;">
             <h2 style="font-size:15px;font-weight:700;margin-bottom:12px;color:#374151;">📖 使い方</h2>
             <ol style="padding-left:20px;font-size:13px;color:#475569;line-height:1.9;">
-                <li>ページを開き、入力フォームを確認する</li>
-                <li>必要な情報を入力または選択する</li>
-                <li>実行ボタンをクリックして結果を表示する</li>
-                <li>表示された結果・アドバイスを確認する</li>
-                <li>必要に応じてSNSでシェアする</li>
+                <li>「最終生理開始日」に最後に生理が始まった日を入力する</li>
+                <li>スライダーで平均生理周期（日数）を設定する（標準28日）</li>
+                <li>生理期間（日数）を設定する（標準5日）</li>
+                <li>「計算する」ボタンをクリックする</li>
+                <li>今後3ヶ月の生理予定日・排卵予定日・妊娠可能期間を確認する</li>
             </ol>
         </div>
 
@@ -126,23 +126,23 @@
             <div style="display:flex;flex-direction:column;gap:14px;">
             <div style="border-bottom:1px solid #f1f5f9;padding-bottom:12px;">
               <p style="font-size:14px;font-weight:600;color:#374151;margin-bottom:4px;">Q: 生理周期トラッカーは無料で使えますか？</p>
-              <p style="font-size:13px;color:#6b7280;line-height:1.7;">A: はい、完全無料でご利用いただけます。登録・ログインも不要です。</p>
+              <p style="font-size:13px;color:#6b7280;line-height:1.7;">A: はい、完全無料・登録不要でご利用いただけます。</p>
             </div>
             <div style="border-bottom:1px solid #f1f5f9;padding-bottom:12px;">
-              <p style="font-size:14px;font-weight:600;color:#374151;margin-bottom:4px;">Q: スマートフォンでも使えますか？</p>
-              <p style="font-size:13px;color:#6b7280;line-height:1.7;">A: はい、スマートフォン・タブレット・PCすべてのデバイスからご利用いただけます。</p>
+              <p style="font-size:14px;font-weight:600;color:#374151;margin-bottom:4px;">Q: 入力した日付データはどこかに送信されますか？</p>
+              <p style="font-size:13px;color:#6b7280;line-height:1.7;">A: いいえ。すべての計算はブラウザ内で完結し、サーバーへのデータ送信・保存は行いません。</p>
             </div>
             <div style="border-bottom:1px solid #f1f5f9;padding-bottom:12px;">
-              <p style="font-size:14px;font-weight:600;color:#374151;margin-bottom:4px;">Q: 入力したデータは保存されますか？</p>
-              <p style="font-size:13px;color:#6b7280;line-height:1.7;">A: 入力データはブラウザ内のみで処理され、サーバーへの送信・保存は行いません。プライバシーは保護されます。</p>
+              <p style="font-size:14px;font-weight:600;color:#374151;margin-bottom:4px;">Q: 排卵日の計算精度はどの程度ですか？</p>
+              <p style="font-size:13px;color:#6b7280;line-height:1.7;">A: 平均周期をもとにした参考値です。実際の排卵日は体調・ストレスで変動します。妊活・避妊目的での使用には、必ず医師または基礎体温測定との併用をご検討ください。</p>
             </div>
             <div style="border-bottom:1px solid #f1f5f9;padding-bottom:12px;">
-              <p style="font-size:14px;font-weight:600;color:#374151;margin-bottom:4px;">Q: 何回でも使えますか？</p>
-              <p style="font-size:13px;color:#6b7280;line-height:1.7;">A: はい、回数制限なく何度でもご利用いただけます。</p>
+              <p style="font-size:14px;font-weight:600;color:#374151;margin-bottom:4px;">Q: 周期が不規則な場合はどうすればいいですか？</p>
+              <p style="font-size:13px;color:#6b7280;line-height:1.7;">A: 直近3ヶ月の平均を計算して入力してみてください。28日が標準ですが、21〜40日程度の幅があります。</p>
             </div>
             <div style="border-bottom:1px solid #f1f5f9;padding-bottom:12px;">
-              <p style="font-size:14px;font-weight:600;color:#374151;margin-bottom:4px;">Q: 利用に年齢制限はありますか？</p>
-              <p style="font-size:13px;color:#6b7280;line-height:1.7;">A: 年齢制限はありません。どなたでも無料でご利用いただけます。</p>
+              <p style="font-size:14px;font-weight:600;color:#374151;margin-bottom:4px;">Q: 生理が来ない場合や周期が大きく変わった場合は？</p>
+              <p style="font-size:13px;color:#6b7280;line-height:1.7;">A: ストレス・体重変化・病気・妊娠などが原因の可能性があります。3ヶ月以上異常が続く場合は婦人科への相談をおすすめします。</p>
             </div>
             </div>
         </div>
