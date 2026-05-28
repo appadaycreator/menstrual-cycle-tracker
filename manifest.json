@@ -3,7 +3,7 @@
   "short_name": "sleep-qualit",
   "start_url": "/menstrual-cycle-tracker/",
   "display": "standalone",
-  "background_color": "#ffffff",
+  "background_color": "#6366f1",
   "theme_color": "#6366f1",
   "scope": "/menstrual-cycle-tracker/"
 }
