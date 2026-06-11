@@ -1,0 +1,252 @@
+# 指示（1）
+以下のWEBサービスのデザインを、それぞれ分けて２枚作成してください。
+①LPページ用
+②サービスページ用
+
+## ターゲット
+【テーマに合わせた相応なもの】年代の男女【テーマに合わせた相応なもの】（【テーマに合わせた相応なもの】を使いたい人）  
+
+## トンマナ
+【テーマに合わせた相応なもの】な雰囲気。 （メインカラーは【テーマに合わせた相応なもの】にしてください） 
+
+## デザイン要件
+・サイトの背景やあしらいに【テーマに合わせた相応なもの】を使用してください。 また、アイコンや、ヒーローセクション（最上部）のレイアウトも含めて描画してください。 
+・以下のサービス仕様や、実際のサービス画面を元にユーザー体験として最適なデザインにすること
+・サービスページは既存のレイアウトや機能を確認した上で、最適なデザイン案を作成すること 
+
+## 対象
+Perfect! I have all the competitive intelligence. Now I'll create the design improvement instruction document.
+
+Based on my research:
+- **Period Tracker (period-tracker.org)**: Privacy-first, browser-local storage, email notifications, irregular cycle calculators
+- **Cylo Care**: Free, no sign-up, PDF export/print feature, 12-month calendar with color-coded visualization
+- **Tamahiyo (Benesse)**: Doctor-supervised, educational content on basal temperature & biology, medical context
+
+Now creating the improvement instruction document:
+
+---
+
+## SUMMARY_JSON
+```
+SUMMARY_JSON:{"a":["メール通知・リマインダー機能の追加","不規則な周期パターン認識とカスタム計算","医師監修コンテンツの統合"],"b":["結果のSNS共有（Twitter/X・LINE）・「もう一度試す」ボタン","PDF保存・印刷機能の改善","12ヶ月カレンダー表示とモバイル最適化"],"d":["個人情報送信なし×メール通知のハイブリッド","産婦人科医監修による妊活・周期管理のナレッジ統合","基礎体温×生理周期の自動分析による精度向上"],"seo_h1":"生理周期トラッカー【医学監修・妊活対応】基礎体温から排卵日・妊娠可能期間を自動計算","seo_meta":"生理周期トラッカー｜基礎体温と月経周期から排卵日・妊娠可能期間を自動計算。医師監修による精度、登録不要・完全無料・個人情報送信なし。不規則な周期にも対応。","forbidden":["GTM-TXQGZRF9","ca-pub-8427583028015858","a8.net/svt/ejp?a8mat=4B3WJ7+15S2D0+14MM+6N9LX","rakuten-affiliate-block","updateStepGuide","completeStepGuide","calcAvgCycle","renderCalendar","calc","drawCycleGauge","drawCountdownChart"]}
+```
+
+---
+
+## デザイン改善指示書 / menstrual-cycle-tracker（生理周期トラッカー）
+
+### 背景と目的
+
+本サービスはAppaDay Creator プラットフォーム上の無料生理周期計算ツール。妊活・妊娠準備層をターゲットに、基礎体温と月経周期から排卵日・次回生理日・妊娠可能期間を自動計算する。登録不要・個人情報送信なし・完全無料がUSP。収益はGTM/GA4/Google AdSense経由のディスプレイ広告。技術スタックはHTML5/CSS/Vanilla JS（ローカル保存+計算ロジック）。競合はPeriod Tracker（プライバシー×通知）、Cylo Care（PDF機能）、たまひよ（医学監修）が主要プレイヤー。本サービスは単機能計算ツールの立場から、医学監修×通知機能×360度周期管理への差別化が必須。
+
+### A. ツール精度・機能の改善（競合調査結果を反映）
+
+**競合に存在し本サービスに不足している機能：**
+
+1. **メール通知・リマインダー機能**（Period Tracker実装）
+   - 次回生理予定日・排卵日が近い場合のメール通知
+   - ユーザーがメールアドレス入力時のみ（個人情報最小化）
+   - 実装：ローカルストレージに email + next_period_date を保存、クライアント側の Notification API 活用
+
+2. **PDF保存・印刷機能の強化**（Cylo Care実装）
+   - 現在の `printResult()` 関数を拡張して、12ヶ月分の周期カレンダーを縦型PDF出力
+   - 医療機関への提出想定（ヘッダーに「医師への提出用」表記）
+   - 基礎体温グラフも同時出力
+
+3. **不規則な周期パターン認識**（Period Tracker実装）
+   - 過去3ヶ月の生理日を記録させ、実際の周期変動を算出
+   - 「周期が28-35日の間で変動」といった分析表示
+   - 不規則な周期ユーザーにおける妊娠可能期間の幅を ±3日 で表示
+
+4. **医師監修コンテンツの統合**（たまひよ実装）
+   - 「基礎体温の測定方法」「排卵日の精度について」「妊娠しやすい時期」などのナレッジセクション
+   - 免責事項を明示（「あくまで参考値です」「個人差があります」）
+   - 産婦人科学会の監修者クレジット表記
+
+**競合との比較：本サービスは同水準の計算精度を持つが、通知・ナレッジ・不規則周期対応が欠落している。**
+
+### B. UX・エンゲージメント改善
+
+**必須項目（全サービス共通）:**
+
+1. **結果のSNSシェア機能**（各競合に存在しない差別化ポイント）
+   - 「排卵日が〇月〇日です。妊活頑張ります！」といった定型文を Twitter/X・LINE に共有
+   - ボタンは `<button id="share-twitter">Xでシェア</button>` `<button id="share-line">LINEで共有</button>` を結果画面に追加
+   - 医者や家族に周期を共有したいユースケースに対応
+
+2. **「もう一度試す」ボタン**（UX必須）
+   - 結果画面の下部に `<button id="retry-btn" onclick="resetAll()">もう一度試す</button>` を設置
+   - モーダル確認は不要（既に `resetAll()` が存在）
+
+3. **ツール使い方説明の可視化**
+   - 最初の画面 OR 折りたたみセクションで「このツールでできること」「使い方（3ステップ）」「よくある質問」を追加
+   - コンテンツ：
+     - **できること**：排卵日・妊娠可能期間・次回生理予定日を3秒で計算
+     - **使い方**：① 最終月経初日を入力 → ② 生理周期を入力 → ③ 結果を確認・保存
+     - **よくある質問**：「基礎体温がないと使えない？」（いいえ）、「いつ妊娠しやすい？」（排卵日の1-2日前）
+
+**追加検討項目（本サービス特性に適用）:**
+
+1. **結果保存・ダウンロード機能**（診断系に必須）
+   - `saveHistory()` が既に存在するため、UI強化
+   - 履歴一覧を「〇月の周期」「△月の周期」と月別表示
+   - 各履歴から「このときの基礎体温グラフを見る」といったドリルダウンを追加
+
+2. **ステップインジケーター**（モバイルUX）
+   - 画面上部に「① 日付入力 → ② 周期設定 → ③ 結果」の進捗バー
+   - 現在位置を視覚化（妊活ユーザーは周期管理に集中したいため）
+
+3. **モバイル操作性の最適化**
+   - `<input type="date">` で iOS/Android ネイティブ日付ピッカー呼び出し
+   - タッチ領域を 44×44px 以上で確保
+   - スマートフォン縦向きで 12ヶ月カレンダーを「スワイプで月送り」に変更
+
+### C. SEOコンテンツの強化
+
+**以下を全て実装すること:**
+
+1. **h1タグ改善**
+   ```html
+   <h1>生理周期トラッカー【医学監修・妊活対応】基礎体温から排卵日・妊娠可能期間を自動計算</h1>
+   ```
+   - 変更理由：「医学監修」を明示して信頼性向上、「妊活対応」で検索意図のマッチング
+
+2. **メタディスクリプション改善**
+   ```html
+   <meta name="description" content="生理周期トラッカー｜基礎体温と月経周期から排卵日・妊娠可能期間を自動計算。医師監修による精度、登録不要・完全無料・個人情報送信なし。不規則な周期にも対応。">
+   ```
+
+3. **ツール説明セクション本文への追加**（h2-h3で構成、最低600語）
+   ```html
+   <section id="tool-guide">
+     <h2>このツールでできること</h2>
+     <p>基礎体温と最終月経初日、生理周期の3つの情報から...</p>
+     
+     <h2>使い方（3ステップ）</h2>
+     <h3>ステップ 1: 最終月経初日を入力</h3>
+     <p>...</p>
+     <h3>ステップ 2: 生理周期の長さを入力</h3>
+     <p>...</p>
+     <h3>ステップ 3: 排卵日と妊娠可能期間を確認</h3>
+     <p>...</p>
+     
+     <h2>よくある質問 (FAQ)</h2>
+     <h3>基礎体温を測定していませんが、使えますか？</h3>
+     <p>使えます。生理周期から排卵日を推定できますが...</p>
+     <h3>周期が不規則な場合はどうすればいい？</h3>
+     <p>過去3ヶ月の周期を記録して、平均周期を入力してください...</p>
+     <h3>いつが最も妊娠しやすい日？</h3>
+     <p>排卵日の1-2日前が最も妊娠しやすい時期です...</p>
+   </section>
+   ```
+
+4. **構造化データ (JSON-LD) の追加**
+   ```html
+   <script type="application/ld+json">
+   {
+     "@context": "https://schema.org",
+     "@type": "FAQPage",
+     "mainEntity": [
+       {
+         "@type": "Question",
+         "name": "基礎体温を測定していませんが、使えますか？",
+         "acceptedAnswer": {
+           "@type": "Answer",
+           "text": "使えます。生理周期から排卵日を推定できます..."
+         }
+       },
+       {
+         "@type": "Question",
+         "name": "周期が不規則な場合はどうすればいい？",
+         "acceptedAnswer": {
+           "@type": "Answer",
+           "text": "過去3ヶ月の周期を記録して、平均周期を入力してください..."
+         }
+       }
+     ]
+   }
+   </script>
+   ```
+   または WebApplication スキーマ：
+   ```html
+   <script type="application/ld+json">
+   {
+     "@context": "https://schema.org",
+     "@type": "WebApplication",
+     "name": "生理周期トラッカー",
+     "description": "基礎体温から排卵日を自動計算する無料ツール",
+     "url": "https://appadaycreator.com/menstrual-cycle-tracker/",
+     "applicationCategory": "HealthApplication",
+     "offers": {
+       "@type": "Offer",
+       "price": "0",
+       "priceCurrency": "JPY"
+     }
+   }
+   </script>
+   ```
+
+5. **内部リンク：関連ツールへのリンク 3件追加**
+   ```html
+   <section id="related-tools">
+     <h2>関連ツール・記事</h2>
+     <ul>
+       <li><a href="https://appadaycreator.com/">AppADay Creator トップページ</a> — 他の無料計算ツール・診断ツール</li>
+       <li><a href="https://appadaycreator.com/[OTHER_TOOL]/">基礎体温表管理ツール</a> — 毎日の基礎体温を記録・グラフ化</li>
+       <li><a href="https://appadaycreator.com/[PREGNANCY_TOOL]/">妊娠スケジュール管理ツール</a> — 妊娠週数・出産予定日計算</li>
+     </ul>
+   </section>
+   ```
+
+### D. 競合との差別化ポイント（このサービスならではの価値）
+
+1. **プライバシー×通知のハイブリッド設計**
+   - Period Tracker はプライバシー重視（サーバー保存なし）だが通知機能がない
+   - 本サービスは「メール通知は希望時のみ、データはローカル保存」の選択肢を提供
+   - 「家族や医者に周期を知られたくないが、通知は欲しい」というニッチニーズに対応
+
+2. **医学監修×自動計算のナレッジ統合**
+   - たまひよ（医学監修コンテンツ充実）は計算ツールが簡易的
+   - 本サービスは高精度な計算 + 産婦人科医の監修記事でハイブリッド化
+   - 「計算して、その意味を理解できる」ユーザー体験
+
+3. **基礎体温×生理周期の多層的分析**
+   - Cylo Care は周期の長さのみで計算
+   - 本サービスは基礎体温グラフ + 周期パターン認識 + 医師コメント で「なぜこの日が排卵日なのか」を説明
+   - 医学的リテラシーが高い妊活ユーザーへの差別化
+
+4. **SNS共有×医療連携**
+   - Period Tracker、Cylo Care にはSNS共有機能なし
+   - 本サービスは「パートナーと周期を共有」「医者の診察前にスクリーンショット送付」というユースケースに対応
+   - 妊活は夫婦で進めるプロセスのため、共有機能は高い転換価値
+
+### 変更禁止事項
+
+- **GTMタグ**: `GTM-TXQGZRF9` （計測・最適化用、削除禁止）
+- **GA4タグ**: `ga-*` 関連（ユーザー動線計測）
+- **AdSenseタグ**: `ca-pub-8427583028015858` （収益源、変更禁止）
+- **アフィリエイトリンク**: A8.net `a8.net/svt/ejp?a8mat=4B3WJ7+15S2D0+14MM+6N9LX`、楽天 `rakuten-affiliate-block` （収益源）
+- **コアJSロジック関数**: `updateStepGuide`、`completeStepGuide`、`calcAvgCycle`、`renderCalendar`、`calc`、`drawCycleGauge`、`drawCountdownChart` （計算ロジックの誤動作リスク）
+- **外部API・外部サービス連携**は一切追加しない（外部依存の排除）
+- HTML/CSS/JS のみで完結（Webサーバーバックエンド不要）
+
+---
+
+## Sources:
+- [Period Tracker - Free Online Period Calculator Cycle Tracker](https://period-tracker.org/)
+- [Cylo Care Period Tracker](https://cylo.care/period-tracker)
+- [Benesse たまひよ 排卵日計算](https://st.benesse.ne.jp/ninkatsu/ovulation_calculator/)
+- [Flo](https://flo.health/)
+- [Clue Period Tracker](https://helloclue.com/)331 生理周期トラッカー menstrual-cycle-tracker https://appadaycreator.com/menstrual-cycle-tracker/
+
+# 指示（2）
+今作成したLP+サービスページの画像に対して、以下を実施して。 
+
+# 詳細
+・1枚の画像にアイコン素材シートとして以下の仕様で生成:  
+- 8列×N行の均一グリッド。全セル同サイズ - セル間は太さ10px程度の薄いグレー(#E0E0E0)の直線で区切り、線はシート全体を貫通させる  
+- 各セルの背景は完全な純白(#FFFFFF)。グラデーション・薄い色・テクスチャは不可  
+- 1セルに素材1個。素材は区切り線に触れないようセル内側に15%以上の余白  
+- 影・グロー効果は控えめにしてセル内に完全に収める
+
+**【今回の指示】LPページ用の画像を1枚だけ生成してください。サービスページとアイコン素材シートはこの後の別メッセージで依頼します。**

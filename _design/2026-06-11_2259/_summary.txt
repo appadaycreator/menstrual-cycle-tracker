@@ -1,0 +1,9 @@
+target: No.331 生理周期トラッカー
+saved_unique: 3
+expected: 3
+completed_ok: True
+stopped_detected: False
+image_paths:
+  /Users/masayukitokunaga/workspace/30service/menstrual-cycle-tracker/_design/2026-06-11_2259/01_design.png
+  /Users/masayukitokunaga/workspace/30service/menstrual-cycle-tracker/_design/2026-06-11_2259/02_design.png
+  /Users/masayukitokunaga/workspace/30service/menstrual-cycle-tracker/_design/2026-06-11_2259/03_design.png

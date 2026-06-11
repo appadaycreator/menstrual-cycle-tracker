@@ -1,0 +1,64 @@
+Fetch this design file, read its readme, and implement the relevant aspects of the design. https://api.anthropic.com/v1/design/h/eOhfQHwLytZT68K57QlV5w?open_file=LP.html
+Implement: ## 指示
+ClaudeDesignによって作成されたデザインを効果的に反映してほしい。
+
+- LPページとサービスページのデザインを実際のWebサービスに反映する。
+- **LPページは必ず `lp/index.html` として新規作成すること**（ディレクトリが存在しない場合は `mkdir lp` で作成）
+- サービスページは既存の / を更新。ユーザの利用動線を優先にしつつデザイン変更して。
+- コンテンツの目的に合わせて良いが、PCでもモバイルでも見れるように調整してほしい。
+- 全体のトップページのサービスページへのリンクは、LPページのURL（/lp/）に変更する
+- 今回の新デザイン（LPページのテーマカラーや素材・文字フォント・画像など）を該当既存サービスの全ページに刷新すること
+
+## ⚠️ 作業スコープ（必ず守ること）
+
+**読み込み・編集するファイルはこれだけ：**
+- `index.html`（サービスページ）
+- `lp/index.html`（LPページ・存在しない場合は新規作成）
+- 既存の `.css` ファイル（存在する場合のみ）
+
+**それ以外のファイル（contact.html, privacy-policy.html, terms.html, usage.html 等）は読まない・触らない。**
+ディレクトリ探索・ファイル一覧取得も不要。上記ファイルを直接編集すること。
+
+## ⚠️ 必須：実装完了後に必ず以下を実行すること（ローカルサーバーテストは不要）
+
+```bash
+git add -A
+git commit -m "Apply: design update with LP page"
+git push origin main
+```
+
+**git push origin main を実行してから完了とすること。push 完了のログを確認すること。**
+ローカルHTTPサーバーでのテストは不要。push が完了した時点で作業完了。
+
+## Claude Design プロジェクト
+
+
+Claude Design で生成されたコンポーネント（JSX・CSS）やプロトタイプの構成・スタイルを参考に実装すること。
+
+## デザイン参照画像（ローカル）
+- LP全体デザイン:      /Users/masayukitokunaga/workspace/30service/menstrual-cycle-tracker/_design/2026-06-11_2317/01_design.png
+- サービスページデザイン: /Users/masayukitokunaga/workspace/30service/menstrual-cycle-tracker/_design/2026-06-11_2317/02_design.png
+- アイコン素材シート:   /Users/masayukitokunaga/workspace/30service/menstrual-cycle-tracker/_design/2026-06-11_2317/03_design.png
+- 分割済みアイコン:    /Users/masayukitokunaga/workspace/30service/menstrual-cycle-tracker/assets/icons/split
+
+## 制約
+- GTM・GA4・AdSenseタグは変更しない
+- アフィリエイトリンクは変更しない
+- コアJSロジック（診断・計算ロジック）は変更しない
+
+## 対象プロジェクト
+331 生理周期トラッカー menstrual-cycle-tracker https://appadaycreator.com/menstrual-cycle-tracker/
+/Users/masayukitokunaga/workspace/30service/menstrual-cycle-tracker/
+
+## ②デザイン改善要約（反映すること）
+SUMMARY_JSON:{"a":["メール通知・リマインダー機能の追加","不規則な周期パターン認識とカスタム計算","医師監修コンテンツの統合"],"b":["結果のSNS共有（Twitter/X・LINE）・「もう一度試す」ボタン","PDF保存・印刷機能の改善","12ヶ月カレンダー表示とモバイル最適化"],"d":["個人情報送信なし×メール通知のハイブリッド","産婦人科医監修による妊活・周期管理のナレッジ統合","基礎体温×生理周期の自動分析による精度向上"],"seo_h1":"生理周期トラッカー【医学監修・妊活対応】基礎体温から排卵日・妊娠可能期間を自動計算","seo_meta":"生理周期トラッカー｜基礎体温と月経周期から排卵日・妊娠可能期間を自動計算。医師監修による精度、登録不要・完全無料・個人情報送信なし。不規則な周期にも対応。","forbidden":["GTM-TXQGZRF9","ca-pub-8427583028015858","a8.net/svt/ejp?a8mat=4B3WJ7+15S2D0+14MM+6N9LX","rakuten-affiliate-block","updateStepGuide","completeStepGuide","calcAvgCycle","renderCalendar","calc","drawCycleGauge","drawCountdownChart"]}
+
+## 現在のindex.htmlの構成情報（事前読み込み済み・tool callでのファイル読み込み不要）
+<title>生理周期トラッカー【無料】次回生理日・排卵日・基礎体温管理を自動計算</title>
+<meta name="description" content="生理周期トラッカー｜妊活・妊娠準備に最適な無料ツール。基礎体温測定と生理周期から次回生理日・排卵日・妊娠可能期間を自動計算。体調変化を記録して毎月の周期管理に。生理周期が短い・長い・不規則な場合も対応。登録不要・個人情報送信なし・完全無料。">
+<!-- GTM: GTM-TXQGZRF9 -->
+<!-- AdSense: ca-pub-8427583028015858 -->
+<!-- Affiliate A8: a8.net/svt/ejp?a8mat=4B3WJ7+15S2D0+14MM+6N9LX -->
+<!-- Affiliate 楽天: rakuten-affiliate-block -->
+<!-- JS functions: updateStepGuide, completeStepGuide, showToast, saveData, restoreData, onSliderInput, updateSliderBg, calcAvgCycle, fmt, dateKey, renderCalendar, calc, saveHistory, renderHistory, printResult, copyResult, fallbackCopy, resetAll, addToGoogleCalendar, addBookmark, drawCycleGauge, drawCountdownChart, validateLastDate, validatePastDates, pct, dow, dateStr, done -->
+<h1>【完全無料】生理周期トラッカー｜基礎体温・次回生理日・排卵日を自動計算</h1>
