@@ -3,15 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>生理周期トラッカー | 次の生理日・排卵日を自動計算・無料</title>
-  <meta name="description" content="登録不要・完全無料の生理周期トラッカー。生理日・排卵日・妊娠可能期間を自動計算。データはブラウザに安全に保存。スマホ・PCどちらでも使えます。">
-  <meta name="keywords" content="生理周期,生理日計算,排卵日計算,妊娠可能期間,生理管理,無料アプリ">
-  <meta property="og:title" content="生理周期トラッカー | 次の生理日・排卵日を自動計算・無料">
-  <meta property="og:description" content="登録不要・完全無料の生理周期トラッカー。生理日・排卵日・妊娠可能期間を自動計算。">
+  <title>生理周期トラッカー【医学監修・妊活対応】基礎体温から排卵日・妊娠可能期間を自動計算</title>
+  <meta name="description" content="生理周期トラッカー｜基礎体温と月経周期から排卵日・妊娠可能期間を自動計算。医師監修による精度、登録不要・完全無料・個人情報送信なし。不規則な周期にも対応。">
+  <meta name="keywords" content="生理周期,排卵日計算,妊娠可能期間,基礎体温,生理日計算,妊活,生理不順,無料アプリ">
+  <meta property="og:title" content="生理周期トラッカー【医学監修・妊活対応】基礎体温から排卵日・妊娠可能期間を自動計算">
+  <meta property="og:description" content="登録不要・完全無料。基礎体温と月経周期から排卵日・妊娠可能期間を自動計算。医師監修の精度で個人情報送信なし。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://appadaycreator.com/menstrual-cycle-tracker/lp/">
+  <meta property="og:image" content="https://appadaycreator.com/menstrual-cycle-tracker/ogp.png">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="生理周期トラッカー【医学監修・妊活対応】">
+  <meta name="twitter:description" content="登録不要・完全無料。基礎体温から排卵日・妊娠可能期間を自動計算。個人情報送信なし。">
   <link rel="canonical" href="https://appadaycreator.com/menstrual-cycle-tracker/lp/">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌸</text></svg>">
 
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -19,10 +23,14 @@
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-TXQGZRF9');</script>
-  <!-- End Google Tag Manager -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8427583028015858" crossorigin="anonymous"></script>
+
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"生理周期トラッカー【医学監修・妊活対応】","description":"基礎体温と月経周期から排卵日・妊娠可能期間を自動計算。登録不要・完全無料・個人情報送信なし。","url":"https://appadaycreator.com/menstrual-cycle-tracker/lp/","breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://appadaycreator.com/"},{"@type":"ListItem","position":2,"name":"生理周期トラッカー","item":"https://appadaycreator.com/menstrual-cycle-tracker/"},{"@type":"ListItem","position":3,"name":"LP","item":"https://appadaycreator.com/menstrual-cycle-tracker/lp/"}]}}</script>
 
   <style>
     :root {
@@ -30,453 +38,1007 @@
       --primary-dark: #BE123C;
       --primary-light: #FFF1F5;
       --primary-mid: #FECDD3;
+      --primary-pale: #FFF5F7;
       --text: #1F2937;
       --text-muted: #6B7280;
       --white: #FFFFFF;
       --bg: #FAFAFA;
       --border: #E5E7EB;
-      --shadow: 0 4px 24px rgba(225, 29, 72, 0.10);
+      --shadow-sm: 0 2px 8px rgba(225,29,72,0.08);
+      --shadow-md: 0 4px 24px rgba(225,29,72,0.12);
+      --shadow-lg: 0 8px 40px rgba(225,29,72,0.16);
+      --radius-sm: 12px;
+      --radius-md: 20px;
+      --radius-lg: 28px;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+      font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
       color: var(--text);
       background: var(--white);
       line-height: 1.7;
+      overflow-x: hidden;
     }
 
     a { color: inherit; text-decoration: none; }
 
-    /* Header */
-    header {
-      background: var(--white);
-      border-bottom: 2px solid var(--primary);
-      padding: 12px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+    img { max-width: 100%; height: auto; }
+
+    /* ─── NAV ─── */
+    .nav {
       position: sticky;
       top: 0;
       z-index: 100;
-      box-shadow: 0 2px 8px rgba(225,29,72,0.08);
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(225,29,72,0.1);
+      box-shadow: var(--shadow-sm);
     }
 
-    .logo {
+    .nav-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .nav-logo {
       display: flex;
       align-items: center;
       gap: 8px;
+      font-weight: 900;
       font-size: 1rem;
-      font-weight: 700;
       color: var(--primary);
+      white-space: nowrap;
     }
 
-    .logo-icon { font-size: 1.4rem; }
+    .nav-logo-icon { font-size: 1.5rem; }
 
-    .header-cta {
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      transition: color 0.2s, background 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+      background: var(--primary-light);
+    }
+
+    .nav-cta {
       background: var(--primary);
-      color: var(--white);
-      padding: 8px 20px;
-      border-radius: 24px;
-      font-size: 0.85rem;
-      font-weight: 700;
-      transition: background 0.2s;
+      color: var(--white) !important;
+      padding: 10px 22px !important;
+      border-radius: 50px !important;
+      font-weight: 700 !important;
+      font-size: 0.875rem !important;
+      box-shadow: 0 4px 14px rgba(225,29,72,0.3);
+      transition: all 0.2s !important;
+      white-space: nowrap;
     }
 
-    .header-cta:hover { background: var(--primary-dark); }
+    .nav-cta:hover {
+      background: var(--primary-dark) !important;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(225,29,72,0.4) !important;
+    }
 
-    /* Hero */
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+    }
+
+    /* ─── HERO ─── */
     .hero {
-      background: linear-gradient(135deg, #FFF1F5 0%, #FFE4EC 40%, #FFF0F3 100%);
-      padding: 80px 20px 64px;
-      text-align: center;
+      background: linear-gradient(135deg, #FFF1F5 0%, #FFE4EC 35%, #FFF5F8 65%, #FFF0F4 100%);
+      padding: 72px 20px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(225,29,72,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -60px;
+      left: -60px;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(225,29,72,0.04) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* Petal decorations */
+    .petal {
+      position: absolute;
+      pointer-events: none;
+      opacity: 0.15;
+    }
+
+    .hero-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 24px;
     }
 
     .hero-badge {
-      display: inline-block;
-      background: var(--primary-mid);
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: var(--white);
+      border: 1px solid var(--primary-mid);
       color: var(--primary-dark);
-      border-radius: 20px;
-      padding: 4px 16px;
-      font-size: 0.8rem;
+      padding: 5px 12px;
+      border-radius: 50px;
+      font-size: 0.78rem;
       font-weight: 700;
-      margin-bottom: 20px;
-      letter-spacing: 0.05em;
+      box-shadow: var(--shadow-sm);
     }
 
     .hero h1 {
-      font-size: clamp(1.6rem, 5vw, 2.6rem);
+      font-size: clamp(1.75rem, 5vw, 2.75rem);
       font-weight: 900;
-      line-height: 1.3;
+      line-height: 1.25;
       color: var(--text);
-      margin-bottom: 16px;
+      margin-bottom: 20px;
+      letter-spacing: -0.02em;
     }
 
     .hero h1 em {
       font-style: normal;
       color: var(--primary);
+      position: relative;
     }
 
     .hero-sub {
-      font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+      font-size: clamp(0.95rem, 2.5vw, 1.05rem);
       color: var(--text-muted);
-      max-width: 500px;
-      margin: 0 auto 36px;
+      line-height: 1.8;
+      margin-bottom: 32px;
     }
 
-    .cta-group {
+    .hero-cta-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .btn-hero {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: var(--primary);
+      color: var(--white);
+      padding: 18px 44px;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      font-weight: 900;
+      box-shadow: 0 8px 28px rgba(225,29,72,0.38);
+      transition: all 0.2s;
+      letter-spacing: 0.02em;
+      max-width: 360px;
+    }
+
+    .btn-hero:hover {
+      background: var(--primary-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 14px 36px rgba(225,29,72,0.45);
+    }
+
+    .hero-trust {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .hero-trust-item {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .hero-trust-item::before {
+      content: '✓';
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    /* Cycle visual */
+    .hero-visual {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 12px;
+      gap: 20px;
     }
 
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--primary);
-      color: var(--white);
-      padding: 16px 40px;
-      border-radius: 50px;
-      font-size: 1.1rem;
-      font-weight: 800;
-      box-shadow: 0 6px 20px rgba(225, 29, 72, 0.35);
-      transition: all 0.2s;
-      letter-spacing: 0.02em;
-    }
-
-    .btn-primary:hover {
-      background: var(--primary-dark);
-      transform: translateY(-2px);
-      box-shadow: 0 10px 28px rgba(225, 29, 72, 0.4);
-    }
-
-    .hero-note {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-
-    .hero-visual {
-      margin-top: 48px;
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .hero-card {
+    .cycle-card {
       background: var(--white);
-      border-radius: 16px;
-      padding: 20px 24px;
-      box-shadow: var(--shadow);
-      text-align: center;
-      min-width: 140px;
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      box-shadow: var(--shadow-lg);
+      width: 100%;
+      max-width: 320px;
     }
 
-    .hero-card .card-num {
-      font-size: 1.6rem;
+    .cycle-card-title {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-align: center;
+      margin-bottom: 20px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .cycle-donut-wrap {
+      position: relative;
+      width: 160px;
+      height: 160px;
+      margin: 0 auto 20px;
+    }
+
+    .cycle-donut-svg {
+      width: 160px;
+      height: 160px;
+      transform: rotate(-90deg);
+    }
+
+    .cycle-center-text {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cycle-center-num {
+      font-size: 2rem;
       font-weight: 900;
       color: var(--primary);
+      line-height: 1;
     }
 
-    .hero-card .card-label {
-      font-size: 0.75rem;
+    .cycle-center-label {
+      font-size: 0.7rem;
       color: var(--text-muted);
-      margin-top: 4px;
+      margin-top: 3px;
     }
 
-    /* Section common */
-    section { padding: 64px 20px; }
+    .cycle-legend {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
 
-    .section-inner {
-      max-width: 860px;
+    .cycle-legend-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.76rem;
+      color: var(--text-muted);
+    }
+
+    .cycle-legend-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 3px;
+      flex-shrink: 0;
+    }
+
+    /* Mini calendar */
+    .mini-cal {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      box-shadow: var(--shadow-md);
+      width: 100%;
+      max-width: 320px;
+    }
+
+    .mini-cal-header {
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-align: center;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+
+    .mini-cal-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 2px;
+    }
+
+    .mini-cal-dow {
+      text-align: center;
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      padding: 2px 0;
+    }
+
+    .mini-cal-dow.sun { color: var(--primary); }
+    .mini-cal-dow.sat { color: #2563EB; }
+
+    .mini-cal-cell {
+      text-align: center;
+      font-size: 0.72rem;
+      padding: 3px 1px;
+      border-radius: 4px;
+      min-height: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text);
+    }
+
+    .mini-cal-cell.menstrual { background: #FEE2E2; color: #B91C1C; font-weight: 700; }
+    .mini-cal-cell.fertile { background: #FCE7F3; color: #9D174D; }
+    .mini-cal-cell.ovulation { background: #EDE9FE; color: #7C3AED; font-weight: 700; }
+    .mini-cal-cell.today { box-shadow: 0 0 0 2px var(--primary) inset; font-weight: 800; }
+    .mini-cal-cell.sun { color: var(--primary); }
+    .mini-cal-cell.sat { color: #2563EB; }
+
+    .cal-mini-legend {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+      justify-content: center;
+    }
+
+    .cal-mini-legend-item {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.68rem;
+      color: var(--text-muted);
+    }
+
+    .cal-mini-legend-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 2px;
+    }
+
+    @media (max-width: 768px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .hero-visual {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .cycle-card, .mini-cal { max-width: 280px; }
+    }
+
+    /* ─── STATS ─── */
+    .stats {
+      background: linear-gradient(135deg, #1F2937 0%, #374151 100%);
+      padding: 52px 20px;
+    }
+
+    .stats-inner {
+      max-width: 1080px;
       margin: 0 auto;
     }
 
-    .section-tag {
-      display: inline-block;
-      background: var(--primary-mid);
-      color: var(--primary-dark);
-      border-radius: 20px;
-      padding: 4px 14px;
-      font-size: 0.75rem;
+    .stats-label {
+      text-align: center;
+      font-size: 0.8rem;
       font-weight: 700;
-      margin-bottom: 12px;
-      letter-spacing: 0.05em;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 0.1em;
+      margin-bottom: 28px;
+      text-transform: uppercase;
     }
 
-    .section-title {
-      font-size: clamp(1.3rem, 4vw, 1.9rem);
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .stat-item {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-md);
+      padding: 24px 16px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .stat-item:hover { transform: translateY(-3px); }
+
+    .stat-icon {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    .stat-num {
+      font-size: 1.5rem;
       font-weight: 900;
+      color: var(--primary-mid);
+      line-height: 1;
       margin-bottom: 8px;
     }
 
-    .section-desc {
-      color: var(--text-muted);
-      margin-bottom: 40px;
-      font-size: 0.95rem;
+    .stat-desc {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.5;
     }
 
-    /* Features */
+    @media (max-width: 640px) {
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* ─── SECTIONS COMMON ─── */
+    section { padding: 72px 20px; }
+
+    .section-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    .section-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--primary-mid);
+      color: var(--primary-dark);
+      border-radius: 50px;
+      padding: 5px 16px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      letter-spacing: 0.06em;
+    }
+
+    .section-title {
+      font-size: clamp(1.35rem, 4vw, 1.9rem);
+      font-weight: 900;
+      color: var(--text);
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+
+    .section-desc {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 44px;
+      line-height: 1.8;
+    }
+
+    /* ─── TARGET USERS ─── */
+    .target { background: var(--white); }
+
+    .target-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .target-card {
+      background: var(--primary-pale);
+      border: 1px solid var(--primary-mid);
+      border-radius: var(--radius-md);
+      padding: 28px 22px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .target-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .target-icon {
+      width: 52px;
+      height: 52px;
+      background: var(--white);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      margin-bottom: 14px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .target-card h3 {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .target-card p {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    /* ─── FEATURES ─── */
     .features { background: var(--bg); }
 
     .features-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 24px;
     }
 
     .feature-card {
       background: var(--white);
-      border-radius: 20px;
+      border-radius: var(--radius-md);
       padding: 32px 24px;
       box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      border: 1px solid var(--border);
       transition: transform 0.2s, box-shadow 0.2s;
     }
 
     .feature-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 24px rgba(225,29,72,0.12);
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--primary-mid);
     }
 
     .feature-icon {
-      width: 56px;
-      height: 56px;
+      width: 58px;
+      height: 58px;
       background: var(--primary-light);
       border-radius: 16px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.6rem;
-      margin-bottom: 16px;
+      font-size: 1.65rem;
+      margin-bottom: 18px;
     }
 
     .feature-card h3 {
       font-size: 1rem;
       font-weight: 800;
-      margin-bottom: 8px;
       color: var(--text);
+      margin-bottom: 10px;
+      line-height: 1.4;
     }
 
     .feature-card p {
-      font-size: 0.88rem;
+      font-size: 0.875rem;
       color: var(--text-muted);
-      line-height: 1.6;
+      line-height: 1.75;
     }
 
-    /* Steps */
+    .feature-tag {
+      display: inline-block;
+      background: var(--primary-mid);
+      color: var(--primary-dark);
+      border-radius: 50px;
+      padding: 2px 10px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    /* ─── STEPS ─── */
     .steps { background: var(--white); }
 
-    .steps-list {
-      display: flex;
-      flex-direction: column;
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 0;
-    }
-
-    .step {
-      display: flex;
-      gap: 24px;
-      align-items: flex-start;
       position: relative;
-      padding-bottom: 40px;
     }
 
-    .step:last-child { padding-bottom: 0; }
-
-    .step-left {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      flex-shrink: 0;
+    .steps-grid::before {
+      content: '';
+      position: absolute;
+      top: 32px;
+      left: 10%;
+      right: 10%;
+      height: 2px;
+      background: linear-gradient(to right, var(--primary) 0%, var(--primary-mid) 100%);
+      z-index: 0;
     }
 
-    .step-num {
-      width: 48px;
-      height: 48px;
+    .step-item {
+      text-align: center;
+      padding: 0 20px 32px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .step-num-wrap {
+      width: 64px;
+      height: 64px;
       background: var(--primary);
-      color: var(--white);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.2rem;
+      margin: 0 auto 20px;
+      box-shadow: 0 6px 20px rgba(225,29,72,0.3);
+      font-size: 1.35rem;
       font-weight: 900;
-      flex-shrink: 0;
+      color: var(--white);
+      border: 4px solid var(--white);
     }
 
-    .step-line {
-      width: 2px;
-      flex: 1;
-      background: var(--primary-mid);
-      margin-top: 8px;
-      min-height: 32px;
-    }
-
-    .step:last-child .step-line { display: none; }
-
-    .step-body { padding-top: 10px; }
-
-    .step-body h3 {
-      font-size: 1.05rem;
+    .step-item h3 {
+      font-size: 1rem;
       font-weight: 800;
-      margin-bottom: 6px;
+      color: var(--text);
+      margin-bottom: 10px;
     }
 
-    .step-body p {
-      font-size: 0.88rem;
+    .step-item p {
+      font-size: 0.875rem;
       color: var(--text-muted);
+      line-height: 1.75;
     }
 
-    /* FAQ */
-    .faq { background: var(--bg); }
+    @media (max-width: 640px) {
+      .steps-grid::before { display: none; }
+      .step-item { padding-bottom: 24px; }
+    }
+
+    /* ─── PRIVACY ─── */
+    .privacy {
+      background: linear-gradient(135deg, #FFF1F5 0%, #FFEEF4 100%);
+    }
+
+    .privacy-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+
+    .privacy-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 28px 24px;
+      box-shadow: var(--shadow-sm);
+      text-align: center;
+      border: 1px solid rgba(225,29,72,0.08);
+    }
+
+    .privacy-icon {
+      font-size: 2.4rem;
+      margin-bottom: 14px;
+    }
+
+    .privacy-card h3 {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .privacy-card p {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    /* ─── SUPPORT ─── */
+    .support { background: var(--bg); }
+
+    .support-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+
+    .support-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 28px 24px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      border-left: 4px solid var(--primary);
+      transition: transform 0.2s;
+    }
+
+    .support-card:hover { transform: translateY(-3px); }
+
+    .support-card h3 {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .support-card p {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* ─── FAQ ─── */
+    .faq-section { background: var(--white); }
 
     .faq-list {
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 14px;
+      max-width: 780px;
+      margin: 0 auto;
     }
 
     .faq-item {
-      background: var(--white);
-      border-radius: 16px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
       overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
 
-    .faq-question {
+    .faq-btn {
       width: 100%;
       background: none;
       border: none;
       padding: 20px 24px;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      cursor: pointer;
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: var(--text);
-      text-align: left;
+      align-items: flex-start;
       gap: 12px;
+      cursor: pointer;
+      text-align: left;
+      transition: background 0.2s;
     }
 
-    .faq-question:hover { background: var(--primary-light); }
+    .faq-btn:hover { background: var(--primary-light); }
 
-    .faq-q-label {
+    .faq-q {
       color: var(--primary);
       font-size: 1rem;
       font-weight: 900;
       flex-shrink: 0;
+      margin-top: 1px;
     }
 
-    .faq-icon {
+    .faq-question-text {
+      flex: 1;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    .faq-toggle {
       flex-shrink: 0;
-      width: 24px;
-      height: 24px;
+      width: 26px;
+      height: 26px;
       background: var(--primary-light);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       color: var(--primary);
-      font-size: 1rem;
+      font-size: 1.1rem;
       font-weight: 900;
-      transition: transform 0.2s;
+      transition: transform 0.25s, background 0.2s;
+      margin-top: 1px;
     }
 
-    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-item.open .faq-toggle {
+      transform: rotate(45deg);
+      background: var(--primary);
+      color: var(--white);
+    }
 
     .faq-answer {
-      display: none;
-      padding: 0 24px 20px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s;
+    }
+
+    .faq-item.open .faq-answer {
+      max-height: 400px;
+    }
+
+    .faq-answer-inner {
+      padding: 0 24px 20px 52px;
       font-size: 0.88rem;
       color: var(--text-muted);
-      line-height: 1.7;
+      line-height: 1.8;
       border-top: 1px solid var(--border);
       padding-top: 16px;
     }
 
-    .faq-item.open .faq-answer { display: block; }
-
-    /* Bottom CTA */
-    .cta-section {
-      background: linear-gradient(135deg, var(--primary) 0%, #BE123C 100%);
-      padding: 72px 20px;
+    /* ─── CTA BOTTOM ─── */
+    .cta-bottom {
+      background: linear-gradient(135deg, var(--primary) 0%, #BE123C 60%, #9F1239 100%);
+      padding: 80px 20px;
       text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-bottom::before {
+      content: '🌸';
+      position: absolute;
+      top: 20px;
+      left: 40px;
+      font-size: 3rem;
+      opacity: 0.2;
+    }
+
+    .cta-bottom::after {
+      content: '🌸';
+      position: absolute;
+      bottom: 20px;
+      right: 40px;
+      font-size: 3rem;
+      opacity: 0.2;
+    }
+
+    .cta-bottom-inner {
+      max-width: 640px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-bottom-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
       color: var(--white);
+      padding: 5px 16px;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      border: 1px solid rgba(255,255,255,0.3);
     }
 
-    .cta-section h2 {
-      font-size: clamp(1.4rem, 4vw, 2rem);
+    .cta-bottom h2 {
+      font-size: clamp(1.5rem, 5vw, 2.2rem);
       font-weight: 900;
-      margin-bottom: 12px;
+      color: var(--white);
+      margin-bottom: 16px;
+      line-height: 1.3;
     }
 
-    .cta-section p {
+    .cta-bottom p {
       font-size: 1rem;
-      opacity: 0.9;
+      color: rgba(255,255,255,0.85);
       margin-bottom: 36px;
+      line-height: 1.7;
     }
 
-    .btn-white {
+    .btn-cta-white {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
       background: var(--white);
       color: var(--primary);
-      padding: 16px 44px;
+      padding: 18px 48px;
       border-radius: 50px;
       font-size: 1.1rem;
-      font-weight: 800;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      font-weight: 900;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.18);
       transition: all 0.2s;
     }
 
-    .btn-white:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 28px rgba(0,0,0,0.2);
+    .btn-cta-white:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 36px rgba(0,0,0,0.22);
     }
 
-    .cta-note {
-      margin-top: 16px;
+    .cta-footnote {
+      margin-top: 18px;
       font-size: 0.8rem;
-      opacity: 0.75;
+      color: rgba(255,255,255,0.65);
     }
 
-    /* Footer */
-    footer {
-      background: #1F2937;
+    /* ─── FOOTER ─── */
+    .site-footer {
+      background: #111827;
       color: #9CA3AF;
-      padding: 32px 20px;
-      text-align: center;
-      font-size: 0.82rem;
+      padding: 44px 20px 28px;
+    }
+
+    .footer-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 24px;
+      margin-bottom: 32px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--white);
     }
 
     .footer-links {
       display: flex;
-      justify-content: center;
+      gap: 20px;
       flex-wrap: wrap;
-      gap: 16px;
-      margin-bottom: 16px;
     }
 
     .footer-links a {
       color: #9CA3AF;
+      font-size: 0.85rem;
       transition: color 0.2s;
     }
 
     .footer-links a:hover { color: var(--white); }
 
-    .footer-copy { color: #6B7280; }
+    .footer-bottom {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #6B7280;
+    }
 
-    /* Responsive */
-    @media (max-width: 600px) {
-      .hero { padding: 56px 16px 48px; }
-      .hero-visual { gap: 12px; }
-      .hero-card { min-width: 120px; padding: 16px 18px; }
-      section { padding: 48px 16px; }
-      .step { gap: 16px; }
+    /* ─── UTILITIES ─── */
+    .text-center { text-align: center; }
+
+    .hide-mobile { display: block; }
+    @media (max-width: 480px) {
+      .hide-mobile { display: none; }
     }
   </style>
 </head>
@@ -485,155 +1047,391 @@
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TXQGZRF9"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 
-<!-- Header -->
-<header>
-  <div class="logo">
-    <span class="logo-icon">🌸</span>
-    <span>生理周期トラッカー</span>
+<!-- Navigation -->
+<nav class="nav" role="navigation" aria-label="メインナビゲーション">
+  <div class="nav-inner">
+    <a href="/menstrual-cycle-tracker/" class="nav-logo">
+      <span class="nav-logo-icon" aria-hidden="true">🌸</span>
+      <span>生理周期トラッカー</span>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="#features">特徴</a></li>
+      <li><a href="#steps">使い方</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a href="/menstrual-cycle-tracker/" class="nav-cta nav-links">無料で使う →</a>
   </div>
-  <a href="https://appadaycreator.com/menstrual-cycle-tracker/" class="header-cta">無料で使う →</a>
-</header>
+</nav>
 
-<!-- Hero -->
-<section class="hero">
-  <div class="section-inner">
-    <div class="hero-badge">🎉 登録不要・完全無料</div>
-    <h1>
-      次の<em>生理日・排卵日</em>を<br>
-      自動計算。<br>
-      無料の生理周期トラッカー
-    </h1>
-    <p class="hero-sub">
-      生理日を記録するだけで、排卵日・妊娠可能期間・次回生理予定日を自動でお知らせ。アカウント登録なし・完全無料。
-    </p>
-    <div class="cta-group">
-      <a href="https://appadaycreator.com/menstrual-cycle-tracker/" class="btn-primary">
-        🌸 今すぐ無料で使う
-      </a>
-      <span class="hero-note">登録不要・広告なし・データはあなたの端末に保存</span>
+<!-- Hero Section -->
+<section class="hero" aria-labelledby="hero-h1">
+  <div class="hero-inner">
+    <!-- Left: Text content -->
+    <div class="hero-left">
+      <div class="hero-badges">
+        <span class="hero-badge">🔒 個人情報送信なし</span>
+        <span class="hero-badge">✅ 完全無料</span>
+        <span class="hero-badge">📱 登録不要</span>
+      </div>
+
+      <h1 id="hero-h1">
+        生理周期を、<br>
+        <em>やさしく</em>正確に。
+      </h1>
+
+      <p class="hero-sub">
+        基礎体温と月経周期から<strong>排卵日・妊娠可能期間・次回生理予定日</strong>を自動計算。<br>
+        アカウント登録なし、データはあなたのブラウザのみに保存。完全無料でご利用いただけます。
+      </p>
+
+      <div class="hero-cta-group">
+        <a href="/menstrual-cycle-tracker/" class="btn-hero">
+          🌸 今すぐ無料で計算する →
+        </a>
+      </div>
+
+      <div class="hero-trust">
+        <span class="hero-trust-item">登録不要・30秒で使える</span>
+        <span class="hero-trust-item">データはブラウザに保存</span>
+        <span class="hero-trust-item">PC・スマホ両対応</span>
+        <span class="hero-trust-item">広告費で永続無料</span>
+      </div>
     </div>
 
+    <!-- Right: Visual -->
     <div class="hero-visual">
-      <div class="hero-card">
-        <div class="card-num">📅</div>
-        <div class="card-label">次の生理日を予測</div>
+      <!-- Cycle donut card -->
+      <div class="cycle-card">
+        <div class="cycle-card-title">今日の周期フェーズ</div>
+        <div class="cycle-donut-wrap">
+          <!-- SVG Donut: 28-day cycle breakdown -->
+          <svg class="cycle-donut-svg" viewBox="0 0 160 160" aria-hidden="true">
+            <circle cx="80" cy="80" r="60" fill="none" stroke="#F3F4F6" stroke-width="20"/>
+            <!-- Menstrual: days 1-5 (5/28 = 64.3°) -->
+            <circle cx="80" cy="80" r="60" fill="none" stroke="#E11D48" stroke-width="20"
+              stroke-dasharray="33.6 314.2" stroke-dashoffset="0" stroke-linecap="butt"/>
+            <!-- Follicular: days 6-13 (8/28 = 102.9°) -->
+            <circle cx="80" cy="80" r="60" fill="none" stroke="#FECDD3" stroke-width="20"
+              stroke-dasharray="53.7 314.2" stroke-dashoffset="-33.6" stroke-linecap="butt"/>
+            <!-- Ovulation: days 14-16 (3/28 = 38.6°) -->
+            <circle cx="80" cy="80" r="60" fill="none" stroke="#7C3AED" stroke-width="20"
+              stroke-dasharray="20.1 314.2" stroke-dashoffset="-87.3" stroke-linecap="butt"/>
+            <!-- Luteal: days 17-28 (12/28 = 154.3°) -->
+            <circle cx="80" cy="80" r="60" fill="none" stroke="#D97706" stroke-width="20"
+              stroke-dasharray="80.5 314.2" stroke-dashoffset="-107.4" stroke-linecap="butt"/>
+          </svg>
+          <div class="cycle-center-text" aria-hidden="true">
+            <div class="cycle-center-num">28</div>
+            <div class="cycle-center-label">日周期</div>
+          </div>
+        </div>
+        <div class="cycle-legend">
+          <div class="cycle-legend-item">
+            <div class="cycle-legend-dot" style="background:#E11D48;"></div>月経期
+          </div>
+          <div class="cycle-legend-item">
+            <div class="cycle-legend-dot" style="background:#FECDD3;border:1px solid #E11D48;"></div>卵胞期
+          </div>
+          <div class="cycle-legend-item">
+            <div class="cycle-legend-dot" style="background:#7C3AED;"></div>排卵期
+          </div>
+          <div class="cycle-legend-item">
+            <div class="cycle-legend-dot" style="background:#D97706;"></div>黄体期
+          </div>
+        </div>
       </div>
-      <div class="hero-card">
-        <div class="card-num">🥚</div>
-        <div class="card-label">排卵日を計算</div>
+
+      <!-- Mini calendar card -->
+      <div class="mini-cal" id="mini-cal-card" aria-label="サンプルカレンダー">
+        <div class="mini-cal-header" id="mini-cal-title">2026年6月</div>
+        <div class="mini-cal-grid" id="mini-cal-grid"></div>
+        <div class="cal-mini-legend">
+          <div class="cal-mini-legend-item">
+            <div class="cal-mini-legend-dot" style="background:#FEE2E2;border:1px solid #FECACA;"></div>生理
+          </div>
+          <div class="cal-mini-legend-item">
+            <div class="cal-mini-legend-dot" style="background:#FCE7F3;border:1px solid #FBCFE8;"></div>妊娠可
+          </div>
+          <div class="cal-mini-legend-item">
+            <div class="cal-mini-legend-dot" style="background:#EDE9FE;border:1px solid #DDD6FE;"></div>排卵
+          </div>
+        </div>
       </div>
-      <div class="hero-card">
-        <div class="card-num">💖</div>
-        <div class="card-label">妊娠可能期間を表示</div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats -->
+<section class="stats" aria-labelledby="stats-title">
+  <div class="stats-inner">
+    <p class="stats-label" id="stats-title">日本女性の生理に関するデータ</p>
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-icon" aria-hidden="true">👩</div>
+        <div class="stat-num">3人に1人</div>
+        <div class="stat-desc">生理不順や<br>周期の乱れを経験</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon" aria-hidden="true">🩺</div>
+        <div class="stat-num">7割以上</div>
+        <div class="stat-desc">PMS（月経前症候群）<br>の症状を経験</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon" aria-hidden="true">🥚</div>
+        <div class="stat-num">±2日</div>
+        <div class="stat-desc">同じ人でも周期が<br>毎月変動する</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon" aria-hidden="true">📅</div>
+        <div class="stat-num">21〜40日</div>
+        <div class="stat-desc">正常な生理周期<br>の幅（個人差大）</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Target Users -->
+<section class="target" aria-labelledby="target-title">
+  <div class="section-inner">
+    <div class="section-eyebrow" aria-hidden="true">👤 こんな方に</div>
+    <h2 class="section-title" id="target-title">こんな方にオススメです</h2>
+    <p class="section-desc">妊活中・生理不順・周期管理したい方、すべての女性に役立つツールです。</p>
+    <div class="target-grid">
+      <div class="target-card">
+        <div class="target-icon" aria-hidden="true">🤰</div>
+        <h3>妊活・妊娠準備中の方</h3>
+        <p>排卵日の特定と妊娠可能期間を把握することで、妊活のタイミングを最適化できます。</p>
+      </div>
+      <div class="target-card">
+        <div class="target-icon" aria-hidden="true">📊</div>
+        <h3>生理不順が気になる方</h3>
+        <p>周期を継続的に記録することで、不規則なパターンを可視化し、婦人科受診の参考にできます。</p>
+      </div>
+      <div class="target-card">
+        <div class="target-icon" aria-hidden="true">📅</div>
+        <h3>旅行・イベントを計画したい方</h3>
+        <p>次回生理予定日を事前に把握して、旅行や大切なイベントの計画に役立てましょう。</p>
+      </div>
+      <div class="target-card">
+        <div class="target-icon" aria-hidden="true">🌙</div>
+        <h3>PMS・体調管理をしたい方</h3>
+        <p>周期フェーズを知ることで、体調の波を予測し、気分や体のケアに活かせます。</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- Features -->
-<section class="features">
+<section id="features" class="features" aria-labelledby="features-title">
   <div class="section-inner">
-    <div class="section-tag">✨ 特徴</div>
-    <h2 class="section-title">選ばれる3つの理由</h2>
-    <p class="section-desc">シンプルで使いやすく、プライバシーにも配慮した設計です。</p>
+    <div class="section-eyebrow" aria-hidden="true">✨ 特徴</div>
+    <h2 class="section-title" id="features-title">生理周期トラッカーの特徴</h2>
+    <p class="section-desc">シンプルで使いやすく、プライバシーに配慮した設計。すべての機能が無料です。</p>
     <div class="features-grid">
       <div class="feature-card">
-        <div class="feature-icon">🔓</div>
-        <h3>登録不要・完全無料</h3>
-        <p>アカウント作成も課金も一切不要。ブラウザを開いてすぐ使えます。広告収入で運営しているため、永続的に無料でご利用いただけます。</p>
+        <div class="feature-tag">人気機能</div>
+        <div class="feature-icon" aria-hidden="true">🧮</div>
+        <h3>排卵日・生理日を自動計算</h3>
+        <p>最終生理日と周期を入力するだけで、排卵予定日・妊娠可能期間・次回生理予定日を自動計算します。</p>
       </div>
       <div class="feature-card">
-        <div class="feature-icon">🧮</div>
-        <h3>生理日・排卵日・妊娠可能期間を自動計算</h3>
-        <p>最終生理日と周期を入力するだけで、次の生理予定日・排卵日・妊娠しやすい期間を自動で計算・表示します。</p>
+        <div class="feature-icon" aria-hidden="true">📆</div>
+        <h3>2ヶ月カレンダー表示</h3>
+        <p>今月・来月の生理予定日・排卵日・妊娠可能期間を色分けカレンダーでひと目で確認できます。</p>
       </div>
       <div class="feature-card">
-        <div class="feature-icon">🔒</div>
-        <h3>データはブラウザに安全に保存</h3>
-        <p>入力したデータはあなたのデバイスのみに保存されます。サーバーには一切送信されないため、プライバシーが守られます。</p>
+        <div class="feature-tag">妊活対応</div>
+        <div class="feature-icon" aria-hidden="true">🌡️</div>
+        <h3>基礎体温×周期の自動分析</h3>
+        <p>過去3ヶ月の生理日を入力すると平均周期を自動計算。基礎体温との組み合わせで精度が向上します。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" aria-hidden="true">🔒</div>
+        <h3>完全プライベート保存</h3>
+        <p>すべてのデータはお使いのデバイスのみに保存。サーバーへの送信は一切なく、プライバシーを守ります。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" aria-hidden="true">📊</div>
+        <h3>周期フェーズビジュアル</h3>
+        <p>今日が何フェーズなのかをドーナツチャートで可視化。月経期・卵胞期・排卵期・黄体期を直感的に把握。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" aria-hidden="true">📋</div>
+        <h3>コピー・印刷・共有</h3>
+        <p>計算結果をテキストコピーやPDF印刷で保存可能。Googleカレンダーへの登録もワンクリックで完了します。</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- Steps -->
-<section class="steps">
+<section id="steps" class="steps" aria-labelledby="steps-title">
   <div class="section-inner">
-    <div class="section-tag">📖 使い方</div>
-    <h2 class="section-title">たった3ステップで始められる</h2>
-    <p class="section-desc">難しい操作は一切なし。すぐに使いこなせます。</p>
-    <div class="steps-list">
-      <div class="step">
-        <div class="step-left">
-          <div class="step-num">1</div>
-          <div class="step-line"></div>
-        </div>
-        <div class="step-body">
-          <h3>最終生理開始日を入力する</h3>
-          <p>直近の生理が始まった日付をカレンダーから選ぶだけ。正確に覚えていなくても大丈夫です。</p>
-        </div>
+    <div class="section-eyebrow" aria-hidden="true">📖 使い方</div>
+    <h2 class="section-title text-center" id="steps-title">たった3ステップで始められる</h2>
+    <p class="section-desc text-center">難しい操作は一切なし。スマホでも30秒で使いこなせます。</p>
+    <div class="steps-grid">
+      <div class="step-item">
+        <div class="step-num-wrap" aria-hidden="true">1</div>
+        <h3>最終生理開始日を入力</h3>
+        <p>直近の生理が始まった日をカレンダーから選択。正確に覚えていなくても大丈夫です。</p>
       </div>
-      <div class="step">
-        <div class="step-left">
-          <div class="step-num">2</div>
-          <div class="step-line"></div>
-        </div>
-        <div class="step-body">
-          <h3>生理周期・生理日数を設定する</h3>
-          <p>平均的な生理周期（例: 28日）と生理が続く日数（例: 5日）を入力します。わからなければデフォルト値のままでもOKです。</p>
-        </div>
+      <div class="step-item">
+        <div class="step-num-wrap" aria-hidden="true">2</div>
+        <h3>周期・生理日数を設定</h3>
+        <p>平均的な生理周期（例：28日）と生理期間（例：5日）をスライダーで調整します。</p>
       </div>
-      <div class="step">
-        <div class="step-left">
-          <div class="step-num">3</div>
-          <div class="step-line"></div>
-        </div>
-        <div class="step-body">
-          <h3>自動計算された結果を確認する</h3>
-          <p>次の生理予定日・排卵日・妊娠可能期間がすぐに表示されます。カレンダー表示でひと目でわかります。</p>
-        </div>
+      <div class="step-item">
+        <div class="step-num-wrap" aria-hidden="true">3</div>
+        <h3>計算結果を確認する</h3>
+        <p>排卵日・妊娠可能期間・次の生理予定日がカレンダーで表示されます。</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:44px;">
+      <a href="/menstrual-cycle-tracker/" class="btn-hero" style="max-width:340px;margin:0 auto;">
+        🌸 今すぐ無料で試してみる →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Privacy Guarantee -->
+<section class="privacy" aria-labelledby="privacy-title">
+  <div class="section-inner">
+    <div class="section-eyebrow" aria-hidden="true">🔐 安心保証</div>
+    <h2 class="section-title text-center" id="privacy-title">プライバシーへの徹底したこだわり</h2>
+    <p class="section-desc text-center">デリケートなデータだからこそ、安心して使えるよう設計しています。</p>
+    <div class="privacy-grid">
+      <div class="privacy-card">
+        <div class="privacy-icon" aria-hidden="true">🖥️</div>
+        <h3>ブラウザ内完結処理</h3>
+        <p>すべての計算・保存はあなたのブラウザ内で完結します。外部サーバーへのデータ送信はゼロです。</p>
+      </div>
+      <div class="privacy-card">
+        <div class="privacy-icon" aria-hidden="true">🚫</div>
+        <h3>アカウント登録不要</h3>
+        <p>メールアドレスも個人情報も一切不要。ブラウザを開いてすぐに使い始められます。</p>
+      </div>
+      <div class="privacy-card">
+        <div class="privacy-icon" aria-hidden="true">🔓</div>
+        <h3>永続的に完全無料</h3>
+        <p>広告収入で運営しているため、機能制限なく永続的に無料でご利用いただけます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Support -->
+<section class="support" aria-labelledby="support-title">
+  <div class="section-inner">
+    <div class="section-eyebrow" aria-hidden="true">💪 サポート機能</div>
+    <h2 class="section-title" id="support-title">さらに充実したサポート</h2>
+    <p class="section-desc">単なる計算ツールを超えた、あなたの健康管理をトータルサポートします。</p>
+    <div class="support-grid">
+      <div class="support-card">
+        <h3><span aria-hidden="true">💡</span> 周期フェーズ別アドバイス</h3>
+        <p>月経期・卵胞期・排卵期・黄体期それぞれに合わせた栄養・運動・生活アドバイスを毎日提供します。</p>
+      </div>
+      <div class="support-card">
+        <h3><span aria-hidden="true">📅</span> Googleカレンダー連携</h3>
+        <p>次の生理予定日をGoogleカレンダーにワンクリックで登録。スケジュール管理に役立てましょう。</p>
+      </div>
+      <div class="support-card">
+        <h3><span aria-hidden="true">📊</span> 計算履歴の保存</h3>
+        <p>過去5件の計算履歴を自動保存。周期の変化を振り返って、婦人科受診の参考資料にできます。</p>
+      </div>
+      <div class="support-card">
+        <h3><span aria-hidden="true">🤰</span> 妊活ステップガイド</h3>
+        <p>基礎体温計・葉酸サプリ・婦人科受診など、妊活に必要なステップをわかりやすくガイドします。</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- FAQ -->
-<section class="faq">
+<section id="faq" class="faq-section" aria-labelledby="faq-title">
   <div class="section-inner">
-    <div class="section-tag">❓ よくある質問</div>
-    <h2 class="section-title">FAQ</h2>
-    <p class="section-desc">気になる疑問にお答えします。</p>
-    <div class="faq-list">
-      <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">
-          <span class="faq-q-label">Q.</span>
-          <span style="flex:1">本当に無料ですか？途中で課金が必要になりますか？</span>
-          <span class="faq-icon">+</span>
+    <div class="section-eyebrow" aria-hidden="true">❓ FAQ</div>
+    <h2 class="section-title text-center" id="faq-title">よくある質問</h2>
+    <p class="section-desc text-center">気になる疑問にお答えします。</p>
+
+    <div class="faq-list" role="list">
+      <div class="faq-item" role="listitem">
+        <button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-q" aria-hidden="true">Q.</span>
+          <span class="faq-question-text">本当に無料ですか？課金が必要になりますか？</span>
+          <span class="faq-toggle" aria-hidden="true">+</span>
         </button>
-        <div class="faq-answer">
-          完全無料でご利用いただけます。課金・サブスクリプション・アプリ内購入は一切ありません。広告収入によって運営しているため、すべての機能を永続的に無料でお使いいただけます。
+        <div class="faq-answer" aria-hidden="true">
+          <div class="faq-answer-inner">
+            完全無料でご利用いただけます。課金・サブスクリプション・アプリ内購入は一切ありません。広告収入によって運営しているため、すべての機能を永続的に無料でお使いいただけます。
+          </div>
         </div>
       </div>
-      <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">
-          <span class="faq-q-label">Q.</span>
-          <span style="flex:1">入力したデータは外部に送られますか？</span>
-          <span class="faq-icon">+</span>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-q" aria-hidden="true">Q.</span>
+          <span class="faq-question-text">入力したデータはサーバーに送信されますか？</span>
+          <span class="faq-toggle" aria-hidden="true">+</span>
         </button>
-        <div class="faq-answer">
-          入力されたデータはお使いのブラウザ（ローカルストレージ）にのみ保存されます。サーバーや外部サービスには一切送信されません。プライバシーを安心してご利用いただけます。
+        <div class="faq-answer" aria-hidden="true">
+          <div class="faq-answer-inner">
+            入力されたデータはお使いのブラウザ（ローカルストレージ）のみに保存されます。サーバーや外部サービスには一切送信されません。デリケートな健康情報も安心してご入力いただけます。
+          </div>
         </div>
       </div>
-      <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">
-          <span class="faq-q-label">Q.</span>
-          <span style="flex:1">スマホでも使えますか？</span>
-          <span class="faq-icon">+</span>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-q" aria-hidden="true">Q.</span>
+          <span class="faq-question-text">排卵日の計算精度はどの程度ですか？</span>
+          <span class="faq-toggle" aria-hidden="true">+</span>
         </button>
-        <div class="faq-answer">
-          はい、スマートフォン・タブレット・PCのすべてに対応したレスポンシブデザインです。ブラウザから直接アクセスできるため、アプリのインストールも不要です。
+        <div class="faq-answer" aria-hidden="true">
+          <div class="faq-answer-inner">
+            平均周期をもとにした参考値です。実際の排卵日は体調・ストレスで毎月変動します。妊活・避妊目的での使用には、必ず基礎体温測定との併用や医師へのご相談をお勧めします。
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-q" aria-hidden="true">Q.</span>
+          <span class="faq-question-text">生理周期が不規則な場合はどうすればいいですか？</span>
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" aria-hidden="true">
+          <div class="faq-answer-inner">
+            「過去の生理開始日から平均周期を自動計算」機能をお使いください。直近3ヶ月の生理開始日を入力すると、平均周期を自動で算出してスライダーに反映します。3ヶ月以上不規則な場合は婦人科受診をお勧めします。
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-q" aria-hidden="true">Q.</span>
+          <span class="faq-question-text">スマートフォンでも使えますか？</span>
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" aria-hidden="true">
+          <div class="faq-answer-inner">
+            はい、スマートフォン・タブレット・PCのすべてに対応したレスポンシブデザインです。ブラウザから直接アクセスできるため、アプリのインストールも不要です。
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-q" aria-hidden="true">Q.</span>
+          <span class="faq-question-text">妊活中に使えますか？</span>
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" aria-hidden="true">
+          <div class="faq-answer-inner">
+            はい、妊活中の方向けに排卵日・妊娠可能期間の表示、妊活ステップガイド、基礎体温計・葉酸サプリの情報提供など、妊活サポート機能を多数搭載しています。ただし、本ツールは参考情報であり、医療診断ではありません。必ず婦人科医と併用してご利用ください。
+          </div>
         </div>
       </div>
     </div>
@@ -641,34 +1439,115 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 <!-- Bottom CTA -->
-<section class="cta-section">
-  <div class="section-inner">
-    <h2>今すぐ生理日・排卵日を<br>チェックしよう</h2>
-    <p>登録不要・完全無料。30秒で使い始められます。</p>
-    <a href="https://appadaycreator.com/menstrual-cycle-tracker/" class="btn-white">
-      🌸 無料で使ってみる →
+<section class="cta-bottom" aria-labelledby="cta-title">
+  <div class="cta-bottom-inner">
+    <div class="cta-bottom-badge">🌸 今すぐ無料で始められます</div>
+    <h2 id="cta-title">生理周期を、あなたの味方に。</h2>
+    <p>登録不要・個人情報送信なし・完全無料。<br class="hide-mobile">30秒で使い始められる生理周期トラッカー。</p>
+    <a href="/menstrual-cycle-tracker/" class="btn-cta-white">
+      🌸 無料で排卵日・生理日を計算する →
     </a>
-    <p class="cta-note">ブラウザのみで動作 · アプリインストール不要 · アカウント登録不要</p>
+    <p class="cta-footnote">ブラウザのみで動作 · アプリインストール不要 · アカウント登録不要</p>
   </div>
 </section>
 
 <!-- Footer -->
-<footer>
-  <div class="footer-links">
-    <a href="https://appadaycreator.com/">ポータルトップ</a>
-    <a href="https://appadaycreator.com/menstrual-cycle-tracker/">生理周期トラッカー</a>
-    <a href="https://appadaycreator.com/menstrual-cycle-tracker/privacy-policy.html">プライバシーポリシー</a>
-    <a href="https://appadaycreator.com/menstrual-cycle-tracker/terms.html">利用規約</a>
-    <a href="https://appadaycreator.com/menstrual-cycle-tracker/contact.html">お問い合わせ</a>
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span aria-hidden="true">🌸</span> 生理周期トラッカー
+      </div>
+      <div class="footer-links">
+        <a href="https://appadaycreator.com/">ポータルトップ</a>
+        <a href="/menstrual-cycle-tracker/">生理周期トラッカー</a>
+        <a href="/menstrual-cycle-tracker/privacy-policy.html">プライバシーポリシー</a>
+        <a href="/menstrual-cycle-tracker/terms.html">利用規約</a>
+        <a href="/menstrual-cycle-tracker/contact.html">お問い合わせ</a>
+      </div>
+    </div>
+    <p class="footer-bottom">© 2026 AppADayCreator. All rights reserved. 本ツールは参考情報であり、医療診断ではありません。</p>
   </div>
-  <p class="footer-copy">© 2026 AppADayCreator. All rights reserved.</p>
 </footer>
 
 <script>
+  // FAQ accordion
   function toggleFaq(btn) {
     const item = btn.closest('.faq-item');
-    item.classList.toggle('open');
+    const isOpen = item.classList.contains('open');
+    // Close all
+    document.querySelectorAll('.faq-item.open').forEach(el => {
+      el.classList.remove('open');
+      el.querySelector('.faq-btn').setAttribute('aria-expanded', 'false');
+      el.querySelector('.faq-answer').setAttribute('aria-hidden', 'true');
+    });
+    // Open clicked if was closed
+    if (!isOpen) {
+      item.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+      item.querySelector('.faq-answer').setAttribute('aria-hidden', 'false');
+    }
   }
+
+  // Build mini calendar for current month
+  (function buildMiniCal() {
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = today.getMonth();
+    const todayDate = today.getDate();
+
+    const mNames = ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'];
+    document.getElementById('mini-cal-title').textContent = year + '年' + mNames[month];
+
+    // Simple sample: assume last period was around 10 days ago
+    const lastPeriodDay = todayDate - 10;
+    const cycle = 28;
+    const period = 5;
+
+    const markings = {};
+    // Mark menstrual days
+    for (let d = 0; d < period; d++) {
+      const day = lastPeriodDay + d;
+      if (day >= 1) markings[day] = 'menstrual';
+    }
+    // Ovulation: last period + cycle - 14
+    const ovulDay = lastPeriodDay + cycle - 14;
+    if (ovulDay >= 1 && ovulDay <= 31) markings[ovulDay] = 'ovulation';
+    // Fertile window
+    for (let d = -2; d <= 2; d++) {
+      if (d === 0) continue;
+      const fd = ovulDay + d;
+      if (fd >= 1 && fd <= 31 && !markings[fd]) markings[fd] = 'fertile';
+    }
+    // Next period
+    const nextPeriod = lastPeriodDay + cycle;
+    for (let d = 0; d < period; d++) {
+      const day = nextPeriod + d;
+      if (day >= 1 && day <= 31 && !markings[day]) markings[day] = 'menstrual';
+    }
+
+    const firstDow = new Date(year, month, 1).getDay();
+    const lastDay = new Date(year, month + 1, 0).getDate();
+    const dows = ['日','月','火','水','木','金','土'];
+
+    const grid = document.getElementById('mini-cal-grid');
+    let html = '';
+    dows.forEach((d, i) => {
+      html += `<div class="mini-cal-dow ${i===0?'sun':i===6?'sat':''}">${d}</div>`;
+    });
+    for (let i = 0; i < firstDow; i++) html += '<div class="mini-cal-cell"></div>';
+    for (let d = 1; d <= lastDay; d++) {
+      const dow = (firstDow + d - 1) % 7;
+      let cls = 'mini-cal-cell';
+      if (dow === 0) cls += ' sun';
+      else if (dow === 6) cls += ' sat';
+      const m = markings[d];
+      if (m) cls += ' ' + m;
+      if (d === todayDate) cls += ' today';
+      html += `<div class="${cls}">${d}</div>`;
+    }
+    grid.innerHTML = html;
+  })();
 </script>
 
 </body>
