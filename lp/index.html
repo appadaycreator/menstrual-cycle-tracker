@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>生理周期トラッカー | 次の生理日・排卵日を自動計算・無料</title>
+  <meta name="description" content="登録不要・完全無料の生理周期トラッカー。生理日・排卵日・妊娠可能期間を自動計算。データはブラウザに安全に保存。スマホ・PCどちらでも使えます。">
+  <meta name="keywords" content="生理周期,生理日計算,排卵日計算,妊娠可能期間,生理管理,無料アプリ">
+  <meta property="og:title" content="生理周期トラッカー | 次の生理日・排卵日を自動計算・無料">
+  <meta property="og:description" content="登録不要・完全無料の生理周期トラッカー。生理日・排卵日・妊娠可能期間を自動計算。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://appadaycreator.com/menstrual-cycle-tracker/lp/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://appadaycreator.com/menstrual-cycle-tracker/lp/">
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TXQGZRF9');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8427583028015858" crossorigin="anonymous"></script>
+
+  <style>
+    :root {
+      --primary: #E11D48;
+      --primary-dark: #BE123C;
+      --primary-light: #FFF1F5;
+      --primary-mid: #FECDD3;
+      --text: #1F2937;
+      --text-muted: #6B7280;
+      --white: #FFFFFF;
+      --bg: #FAFAFA;
+      --border: #E5E7EB;
+      --shadow: 0 4px 24px rgba(225, 29, 72, 0.10);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.7;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* Header */
+    header {
+      background: var(--white);
+      border-bottom: 2px solid var(--primary);
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(225,29,72,0.08);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .logo-icon { font-size: 1.4rem; }
+
+    .header-cta {
+      background: var(--primary);
+      color: var(--white);
+      padding: 8px 20px;
+      border-radius: 24px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      transition: background 0.2s;
+    }
+
+    .header-cta:hover { background: var(--primary-dark); }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, #FFF1F5 0%, #FFE4EC 40%, #FFF0F3 100%);
+      padding: 80px 20px 64px;
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: var(--primary-mid);
+      color: var(--primary-dark);
+      border-radius: 20px;
+      padding: 4px 16px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      letter-spacing: 0.05em;
+    }
+
+    .hero h1 {
+      font-size: clamp(1.6rem, 5vw, 2.6rem);
+      font-weight: 900;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: var(--primary);
+    }
+
+    .hero-sub {
+      font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+      color: var(--text-muted);
+      max-width: 500px;
+      margin: 0 auto 36px;
+    }
+
+    .cta-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary);
+      color: var(--white);
+      padding: 16px 40px;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      font-weight: 800;
+      box-shadow: 0 6px 20px rgba(225, 29, 72, 0.35);
+      transition: all 0.2s;
+      letter-spacing: 0.02em;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(225, 29, 72, 0.4);
+    }
+
+    .hero-note {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .hero-visual {
+      margin-top: 48px;
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .hero-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 20px 24px;
+      box-shadow: var(--shadow);
+      text-align: center;
+      min-width: 140px;
+    }
+
+    .hero-card .card-num {
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: var(--primary);
+    }
+
+    .hero-card .card-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* Section common */
+    section { padding: 64px 20px; }
+
+    .section-inner {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .section-tag {
+      display: inline-block;
+      background: var(--primary-mid);
+      color: var(--primary-dark);
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      letter-spacing: 0.05em;
+    }
+
+    .section-title {
+      font-size: clamp(1.3rem, 4vw, 1.9rem);
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+
+    .section-desc {
+      color: var(--text-muted);
+      margin-bottom: 40px;
+      font-size: 0.95rem;
+    }
+
+    /* Features */
+    .features { background: var(--bg); }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+
+    .feature-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 32px 24px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(225,29,72,0.12);
+    }
+
+    .feature-icon {
+      width: 56px;
+      height: 56px;
+      background: var(--primary-light);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      margin-bottom: 16px;
+    }
+
+    .feature-card h3 {
+      font-size: 1rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .feature-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* Steps */
+    .steps { background: var(--white); }
+
+    .steps-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .step {
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+      position: relative;
+      padding-bottom: 40px;
+    }
+
+    .step:last-child { padding-bottom: 0; }
+
+    .step-left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .step-num {
+      width: 48px;
+      height: 48px;
+      background: var(--primary);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+
+    .step-line {
+      width: 2px;
+      flex: 1;
+      background: var(--primary-mid);
+      margin-top: 8px;
+      min-height: 32px;
+    }
+
+    .step:last-child .step-line { display: none; }
+
+    .step-body { padding-top: 10px; }
+
+    .step-body h3 {
+      font-size: 1.05rem;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+
+    .step-body p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    /* FAQ */
+    .faq { background: var(--bg); }
+
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .faq-item {
+      background: var(--white);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 20px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text);
+      text-align: left;
+      gap: 12px;
+    }
+
+    .faq-question:hover { background: var(--primary-light); }
+
+    .faq-q-label {
+      color: var(--primary);
+      font-size: 1rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+
+    .faq-icon {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      background: var(--primary-light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      font-size: 1rem;
+      font-weight: 900;
+      transition: transform 0.2s;
+    }
+
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+    .faq-answer {
+      display: none;
+      padding: 0 24px 20px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      border-top: 1px solid var(--border);
+      padding-top: 16px;
+    }
+
+    .faq-item.open .faq-answer { display: block; }
+
+    /* Bottom CTA */
+    .cta-section {
+      background: linear-gradient(135deg, var(--primary) 0%, #BE123C 100%);
+      padding: 72px 20px;
+      text-align: center;
+      color: var(--white);
+    }
+
+    .cta-section h2 {
+      font-size: clamp(1.4rem, 4vw, 2rem);
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
+
+    .cta-section p {
+      font-size: 1rem;
+      opacity: 0.9;
+      margin-bottom: 36px;
+    }
+
+    .btn-white {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--white);
+      color: var(--primary);
+      padding: 16px 44px;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      font-weight: 800;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      transition: all 0.2s;
+    }
+
+    .btn-white:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(0,0,0,0.2);
+    }
+
+    .cta-note {
+      margin-top: 16px;
+      font-size: 0.8rem;
+      opacity: 0.75;
+    }
+
+    /* Footer */
+    footer {
+      background: #1F2937;
+      color: #9CA3AF;
+      padding: 32px 20px;
+      text-align: center;
+      font-size: 0.82rem;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .footer-links a {
+      color: #9CA3AF;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--white); }
+
+    .footer-copy { color: #6B7280; }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .hero { padding: 56px 16px 48px; }
+      .hero-visual { gap: 12px; }
+      .hero-card { min-width: 120px; padding: 16px 18px; }
+      section { padding: 48px 16px; }
+      .step { gap: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TXQGZRF9"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- Header -->
+<header>
+  <div class="logo">
+    <span class="logo-icon">🌸</span>
+    <span>生理周期トラッカー</span>
+  </div>
+  <a href="https://appadaycreator.com/menstrual-cycle-tracker/" class="header-cta">無料で使う →</a>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="section-inner">
+    <div class="hero-badge">🎉 登録不要・完全無料</div>
+    <h1>
+      次の<em>生理日・排卵日</em>を<br>
+      自動計算。<br>
+      無料の生理周期トラッカー
+    </h1>
+    <p class="hero-sub">
+      生理日を記録するだけで、排卵日・妊娠可能期間・次回生理予定日を自動でお知らせ。アカウント登録なし・完全無料。
+    </p>
+    <div class="cta-group">
+      <a href="https://appadaycreator.com/menstrual-cycle-tracker/" class="btn-primary">
+        🌸 今すぐ無料で使う
+      </a>
+      <span class="hero-note">登録不要・広告なし・データはあなたの端末に保存</span>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-card">
+        <div class="card-num">📅</div>
+        <div class="card-label">次の生理日を予測</div>
+      </div>
+      <div class="hero-card">
+        <div class="card-num">🥚</div>
+        <div class="card-label">排卵日を計算</div>
+      </div>
+      <div class="hero-card">
+        <div class="card-num">💖</div>
+        <div class="card-label">妊娠可能期間を表示</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features -->
+<section class="features">
+  <div class="section-inner">
+    <div class="section-tag">✨ 特徴</div>
+    <h2 class="section-title">選ばれる3つの理由</h2>
+    <p class="section-desc">シンプルで使いやすく、プライバシーにも配慮した設計です。</p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🔓</div>
+        <h3>登録不要・完全無料</h3>
+        <p>アカウント作成も課金も一切不要。ブラウザを開いてすぐ使えます。広告収入で運営しているため、永続的に無料でご利用いただけます。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🧮</div>
+        <h3>生理日・排卵日・妊娠可能期間を自動計算</h3>
+        <p>最終生理日と周期を入力するだけで、次の生理予定日・排卵日・妊娠しやすい期間を自動で計算・表示します。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔒</div>
+        <h3>データはブラウザに安全に保存</h3>
+        <p>入力したデータはあなたのデバイスのみに保存されます。サーバーには一切送信されないため、プライバシーが守られます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Steps -->
+<section class="steps">
+  <div class="section-inner">
+    <div class="section-tag">📖 使い方</div>
+    <h2 class="section-title">たった3ステップで始められる</h2>
+    <p class="section-desc">難しい操作は一切なし。すぐに使いこなせます。</p>
+    <div class="steps-list">
+      <div class="step">
+        <div class="step-left">
+          <div class="step-num">1</div>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-body">
+          <h3>最終生理開始日を入力する</h3>
+          <p>直近の生理が始まった日付をカレンダーから選ぶだけ。正確に覚えていなくても大丈夫です。</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-left">
+          <div class="step-num">2</div>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-body">
+          <h3>生理周期・生理日数を設定する</h3>
+          <p>平均的な生理周期（例: 28日）と生理が続く日数（例: 5日）を入力します。わからなければデフォルト値のままでもOKです。</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-left">
+          <div class="step-num">3</div>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-body">
+          <h3>自動計算された結果を確認する</h3>
+          <p>次の生理予定日・排卵日・妊娠可能期間がすぐに表示されます。カレンダー表示でひと目でわかります。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="section-inner">
+    <div class="section-tag">❓ よくある質問</div>
+    <h2 class="section-title">FAQ</h2>
+    <p class="section-desc">気になる疑問にお答えします。</p>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-q-label">Q.</span>
+          <span style="flex:1">本当に無料ですか？途中で課金が必要になりますか？</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          完全無料でご利用いただけます。課金・サブスクリプション・アプリ内購入は一切ありません。広告収入によって運営しているため、すべての機能を永続的に無料でお使いいただけます。
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-q-label">Q.</span>
+          <span style="flex:1">入力したデータは外部に送られますか？</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          入力されたデータはお使いのブラウザ（ローカルストレージ）にのみ保存されます。サーバーや外部サービスには一切送信されません。プライバシーを安心してご利用いただけます。
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-q-label">Q.</span>
+          <span style="flex:1">スマホでも使えますか？</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          はい、スマートフォン・タブレット・PCのすべてに対応したレスポンシブデザインです。ブラウザから直接アクセスできるため、アプリのインストールも不要です。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Bottom CTA -->
+<section class="cta-section">
+  <div class="section-inner">
+    <h2>今すぐ生理日・排卵日を<br>チェックしよう</h2>
+    <p>登録不要・完全無料。30秒で使い始められます。</p>
+    <a href="https://appadaycreator.com/menstrual-cycle-tracker/" class="btn-white">
+      🌸 無料で使ってみる →
+    </a>
+    <p class="cta-note">ブラウザのみで動作 · アプリインストール不要 · アカウント登録不要</p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-links">
+    <a href="https://appadaycreator.com/">ポータルトップ</a>
+    <a href="https://appadaycreator.com/menstrual-cycle-tracker/">生理周期トラッカー</a>
+    <a href="https://appadaycreator.com/menstrual-cycle-tracker/privacy-policy.html">プライバシーポリシー</a>
+    <a href="https://appadaycreator.com/menstrual-cycle-tracker/terms.html">利用規約</a>
+    <a href="https://appadaycreator.com/menstrual-cycle-tracker/contact.html">お問い合わせ</a>
+  </div>
+  <p class="footer-copy">© 2026 AppADayCreator. All rights reserved.</p>
+</footer>
+
+<script>
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    item.classList.toggle('open');
+  }
+</script>
+
+</body>
+</html>
